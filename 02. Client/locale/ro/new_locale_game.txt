@@ -1,0 +1,98 @@
+BATTLEPASS_ALL_QUESTS_AVAILABLE	Toate misiunile sunt disponibile
+BATTLEPASS_BONUS_CHEST	Cufar Bonus
+BATTLEPASS_BONUS_CHEST_HELP	Dupã nivelul %d, fiecare %d EXP suplimentar îþi aduce automat %d x %s. Poþi câºtiga aceastã recompensã în mod repetat.
+BATTLEPASS_BONUS_CHEST_PREVIEW	Click pentru a vedea recompensele posibile ºi cantitãþile din cufãr.
+BATTLEPASS_BUY_EXP	Cumpara EXP
+BATTLEPASS_BUY_PREMIUM_TOOLTIP	Cumpara Premium
+BATTLEPASS_CLAIM_PREVIOUS_CONFIRM	Ai recompense anterioare disponibile. Vrei sã le revendici pe toate împreunã cu recompensa selectatã?
+BATTLEPASS_COMPLETED	Finalizatã
+BATTLEPASS_DEFAULT_QUEST	Misiune Battle Pass
+BATTLEPASS_DEFAULT_QUEST_DESC	Terminã misiunea
+BATTLEPASS_EXP_VALUE	%d EXP
+BATTLEPASS_FILTER_UNFINISHED	Aratã doar misiunile neterminate
+BATTLEPASS_FREE_TITLE	GRATUIT
+BATTLEPASS_HEADER_TIME_LEFT	Expirã în: %s
+BATTLEPASS_LEVEL	Nivel
+BATTLEPASS_MISSION_UNLOCK_DATE	Deblocare: %s
+BATTLEPASS_NEW_QUEST_TIME	Misiune noua in: %s
+BATTLEPASS_PREMIUM_TITLE	PREMIUM
+BATTLEPASS_QUEST_ADD_67_BONUS	Adaugã Bonus 6/7
+BATTLEPASS_QUEST_ADD_ORE	Adauga finisaj
+BATTLEPASS_QUEST_BUILD_SANDCASTLE	Construieste Castele de Nisip cu Galeata
+BATTLEPASS_QUEST_BUY_ITEM_TO_PNJ	Cumpãrã obiecte de la NPC
+BATTLEPASS_QUEST_BUY_ITEM_WITH_GAYA	Cumpara obiecte cu Gaya
+BATTLEPASS_QUEST_CATCH_FISH	Prinde peste
+BATTLEPASS_QUEST_CATCH_HAUNTED_PEARLS	Prinde Perle Bântuite
+BATTLEPASS_QUEST_CRAFT_ITEMS	Crafteaza obiecte
+BATTLEPASS_QUEST_DESC_67	Adaugã bonus 6 / 7
+BATTLEPASS_QUEST_DESC_BUY	Cumpãrã de la NPC
+BATTLEPASS_QUEST_DESC_CHAT	Scrie pe chat general
+BATTLEPASS_QUEST_DESC_CHEST	Deschide cufere
+BATTLEPASS_QUEST_DESC_CIRCUS	Orice spor de abilitate
+BATTLEPASS_QUEST_DESC_CRAFT	Fabricã obiecte
+BATTLEPASS_QUEST_DESC_DEW	Reîncarcã Rouã / Zeu
+BATTLEPASS_QUEST_DESC_DUNGEON	Terminã temnite
+BATTLEPASS_QUEST_DESC_EGG	Cloceste ouã
+BATTLEPASS_QUEST_DESC_FISH	Pescuit
+BATTLEPASS_QUEST_DESC_FLOWERS	Toate cele 4 tipuri
+BATTLEPASS_QUEST_DESC_GAYA	Cumpara cu gaya
+BATTLEPASS_QUEST_DESC_HALLOWEEN_DAILY	Temniþa Halloween de azi
+BATTLEPASS_QUEST_DESC_LEVEL_15	Max. 15 niveluri sub
+BATTLEPASS_QUEST_DESC_LEVEL_20	Max. 20 niveluri sub
+BATTLEPASS_QUEST_DESC_LUCKYBOX	Realege cutii de noroc
+BATTLEPASS_QUEST_DESC_MINING	Extrage minereu
+BATTLEPASS_QUEST_DESC_MYSTICAL	Cufere mistice
+BATTLEPASS_QUEST_DESC_ORE	Adaugã minereu
+BATTLEPASS_QUEST_DESC_PEARLS	Prinde perle bântuite
+BATTLEPASS_QUEST_DESC_PET	Hrãneste animalul
+BATTLEPASS_QUEST_DESC_PLAYERS	Învinge jucãtori
+BATTLEPASS_QUEST_DESC_QUEST_BOOK	Încheie cãrti de misiuni
+BATTLEPASS_QUEST_DESC_SANDCASTLE	Predã o gãleatã
+BATTLEPASS_QUEST_DESC_SELL	Vinde la NPC
+BATTLEPASS_QUEST_DESC_SHRINES	Distruge altarele verii
+BATTLEPASS_QUEST_DESC_SILVER	Câstigã monede argint
+BATTLEPASS_QUEST_DESC_STONE_BAG	Adunã saci cu pietre
+BATTLEPASS_QUEST_DESC_STONE_HUNT	Vânãtoare zilnicã pietre
+BATTLEPASS_QUEST_DESC_SWITCH	Schimbã bonusuri
+BATTLEPASS_QUEST_DESC_TARGET_METIN	Distruge Metinul tintã
+BATTLEPASS_QUEST_DESC_UPGRADE	Îmbunãtãteste echip.
+BATTLEPASS_QUEST_DESTROY_METIN_STONES	Distruge pietre metin
+BATTLEPASS_QUEST_DESTROY_SUMMER_SHRINES	Distruge Altare de Vara
+BATTLEPASS_QUEST_DESTROY_TARGET_METIN	Distruge un Metin Specific
+BATTLEPASS_QUEST_FEED_PET	Hraneste insotitorul
+BATTLEPASS_QUEST_FINISH_DUNGEON	Finalizeaza dungeon-uri
+BATTLEPASS_QUEST_FINISH_HALLOWEEN_DAILY	Primeºte recompensele zilnice din roata Halloween
+BATTLEPASS_QUEST_FINISH_QUEST_BOOK	Completeaza carti de misiune
+BATTLEPASS_QUEST_FINISH_SUMMER_STONE_HUNT	Finalizeaza Vanatoarea Pietrei de Vara
+BATTLEPASS_QUEST_GET_SILVER_COIN	Obtine monede de argint
+BATTLEPASS_QUEST_GET_STONE_BAG	Obtine Sac cu Pietre
+BATTLEPASS_QUEST_HARVEST_HALLOWEEN_FLOWERS	Culege florile de Halloween
+BATTLEPASS_QUEST_KILL_BOSSES	Ucide bosi
+BATTLEPASS_QUEST_KILL_MONSTERS	Ucide monstri
+BATTLEPASS_QUEST_KILL_PLAYERS	Ucide jucatori
+BATTLEPASS_QUEST_MINING	Minerit
+BATTLEPASS_QUEST_OPEN_CHESTS	Deschide cufere
+BATTLEPASS_QUEST_OPEN_EGGS	Deschide oua
+BATTLEPASS_QUEST_OPEN_MYSTICAL_CHESTS	Deschide Cufere Mistice
+BATTLEPASS_QUEST_RECHARGE_DEW_DRAGON	Reîncarcã Roua / Zeul Dragon
+BATTLEPASS_QUEST_REROLL_LUCKYBOX	Reruleaza cutii norocoase
+BATTLEPASS_QUEST_SELL_ITEMS_AT_PNJ	Vinde obiecte la NPC
+BATTLEPASS_QUEST_SEND_GENERAL_CHAT_MESSAGES	Trimite mesaje pe chat-ul General
+BATTLEPASS_QUEST_UPGRADE_CIRCUS_SKILLS	Mãiestria abilitãþilor de circ
+BATTLEPASS_QUEST_UPGRADE_EQUIPMENT	Imbunatateste echipamentul
+BATTLEPASS_QUEST_USE_SWITCH	Foloseste Switch
+BATTLEPASS_RESULT_CLAIMED	Ai primit deja aceastã recompensã.
+BATTLEPASS_RESULT_EXP	Ai câºtigat EXP Battle Pass: %d
+BATTLEPASS_RESULT_INVENTORY	Nu ai suficient loc în inventar.
+BATTLEPASS_RESULT_LEVEL_UP	Nivelul tãu Battle Pass a devenit %d!
+BATTLEPASS_RESULT_LOCKED	Aceastã recompensã se deblocheazã la nivelul %d.
+BATTLEPASS_RESULT_MISSION_DONE	Ai finalizat o misiune Battle Pass!
+BATTLEPASS_RESULT_NO_PREMIUM	Pentru recompensele Premium ai nevoie de Battle Pass Premium.
+BATTLEPASS_RESULT_NO_SEASON	Nu existã un Battle Pass activ în acest moment.
+BATTLEPASS_RESULT_PREMIUM_HAD	Battle Pass Premium este deja activ.
+BATTLEPASS_RESULT_PREMIUM_ON	Battle Pass Premium a fost activat.
+BATTLEPASS_RESULT_REWARD	Recompensele Battle Pass au fost primite (%d).
+BATTLEPASS_REWARD_TITLE	Recompensã
+BATTLEPASS_TITLE	Battlepass
+MINIMAP_TOOLTIP_BATTLEPASS	Battlepass
+MINIMAP_TOOLTIP_SHARE_POSITION	Partajati locatia dvs. în chat

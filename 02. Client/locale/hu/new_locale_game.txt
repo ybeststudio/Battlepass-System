@@ -1,0 +1,98 @@
+BATTLEPASS_ALL_QUESTS_AVAILABLE	Minden küldetés teljesíthetõ
+BATTLEPASS_BONUS_CHEST	Bónusz láda
+BATTLEPASS_BONUS_CHEST_HELP	A(z) %d. szint után minden további %d EXP automatikusan %d x %s jutalmat ad. Ezt a jutalmat többször is megszerezheted.
+BATTLEPASS_BONUS_CHEST_PREVIEW	Kattints a láda lehetséges jutalmainak és mennyiségeinek megtekintéséhez.
+BATTLEPASS_BUY_EXP	EXP vásárlása
+BATTLEPASS_BUY_PREMIUM_TOOLTIP	Prémium vásárlása
+BATTLEPASS_CLAIM_PREVIOUS_CONFIRM	Korábbi jutalmak is elérhetõk. Szeretnéd mindet átvenni a kiválasztott jutalommal együtt?
+BATTLEPASS_COMPLETED	Befejezett
+BATTLEPASS_DEFAULT_QUEST	Battle Pass küldetés
+BATTLEPASS_DEFAULT_QUEST_DESC	Küldetés teljesítése
+BATTLEPASS_EXP_VALUE	%d EXP
+BATTLEPASS_FILTER_UNFINISHED	Csak a befejezetlen küldetések mutatása
+BATTLEPASS_FREE_TITLE	INGYENES
+BATTLEPASS_HEADER_TIME_LEFT	Lejár: %s múlva
+BATTLEPASS_LEVEL	Szint
+BATTLEPASS_MISSION_UNLOCK_DATE	Feloldás: %s
+BATTLEPASS_NEW_QUEST_TIME	Új küldetés: %s
+BATTLEPASS_PREMIUM_TITLE	PRÉMIUM
+BATTLEPASS_QUEST_ADD_67_BONUS	6/7 bónusz hozzáadása
+BATTLEPASS_QUEST_ADD_ORE	Érc hozzáadása
+BATTLEPASS_QUEST_BUILD_SANDCASTLE	Építs homokvárat a vödörrel.
+BATTLEPASS_QUEST_BUY_ITEM_TO_PNJ	Tárgy vásárlása NPC-tõl
+BATTLEPASS_QUEST_BUY_ITEM_WITH_GAYA	Tárgy vásárlása Gayával
+BATTLEPASS_QUEST_CATCH_FISH	Halfogás
+BATTLEPASS_QUEST_CATCH_HAUNTED_PEARLS	Átkozott gyöngyök kifogása
+BATTLEPASS_QUEST_CRAFT_ITEMS	Tárgyak készítése
+BATTLEPASS_QUEST_DESC_67	6. / 7. bónusz adása
+BATTLEPASS_QUEST_DESC_BUY	Vásárlás NPC-tõl
+BATTLEPASS_QUEST_DESC_CHAT	Írj a közös csevegésbe
+BATTLEPASS_QUEST_DESC_CHEST	Ládák nyitása
+BATTLEPASS_QUEST_DESC_CIRCUS	Minden fejlesztés
+BATTLEPASS_QUEST_DESC_CRAFT	Tárgyak készítése
+BATTLEPASS_QUEST_DESC_DEW	Harmat / Isten töltése
+BATTLEPASS_QUEST_DESC_DUNGEON	Kazamaták teljesítése
+BATTLEPASS_QUEST_DESC_EGG	Tojások keltetése
+BATTLEPASS_QUEST_DESC_FISH	Halászat
+BATTLEPASS_QUEST_DESC_FLOWERS	Mind a 4 virágfajta
+BATTLEPASS_QUEST_DESC_GAYA	Vásároljon gayával
+BATTLEPASS_QUEST_DESC_HALLOWEEN_DAILY	Mai Halloween-kazamata
+BATTLEPASS_QUEST_DESC_LEVEL_15	Max. 15 szinttel alább
+BATTLEPASS_QUEST_DESC_LEVEL_20	Max. 20 szinttel alább
+BATTLEPASS_QUEST_DESC_LUCKYBOX	Doboz újradobása
+BATTLEPASS_QUEST_DESC_MINING	Ércbányászat
+BATTLEPASS_QUEST_DESC_MYSTICAL	Misztikus ládák nyitása
+BATTLEPASS_QUEST_DESC_ORE	Érc behelyezése
+BATTLEPASS_QUEST_DESC_PEARLS	Kísértetgyöngyök
+BATTLEPASS_QUEST_DESC_PET	Kedvenc etetése
+BATTLEPASS_QUEST_DESC_PLAYERS	Játékosok legyõzése
+BATTLEPASS_QUEST_DESC_QUEST_BOOK	Küldetéskönyvek
+BATTLEPASS_QUEST_DESC_SANDCASTLE	Vödör leadása
+BATTLEPASS_QUEST_DESC_SELL	Eladás NPC-nek
+BATTLEPASS_QUEST_DESC_SHRINES	Nyári szentélyek
+BATTLEPASS_QUEST_DESC_SILVER	Ezüstérmék szerzése
+BATTLEPASS_QUEST_DESC_STONE_BAG	Kõzsákok gyûjtése
+BATTLEPASS_QUEST_DESC_STONE_HUNT	Napi kõvadászat
+BATTLEPASS_QUEST_DESC_SWITCH	Bónuszok cseréje
+BATTLEPASS_QUEST_DESC_TARGET_METIN	Cél-Metin elpusztítása
+BATTLEPASS_QUEST_DESC_UPGRADE	Felszerelés fejlesztése
+BATTLEPASS_QUEST_DESTROY_METIN_STONES	Metinkövek elpusztítása
+BATTLEPASS_QUEST_DESTROY_SUMMER_SHRINES	Pusztítsd el a nyári szentély Metinköveit!
+BATTLEPASS_QUEST_DESTROY_TARGET_METIN	Adott Metinkõ elpusztítása
+BATTLEPASS_QUEST_FEED_PET	Pet etetése
+BATTLEPASS_QUEST_FINISH_DUNGEON	Kazamata teljesítése
+BATTLEPASS_QUEST_FINISH_HALLOWEEN_DAILY	Vedd át a Halloween napi forgó jutalmait
+BATTLEPASS_QUEST_FINISH_QUEST_BOOK	Teljes küldetéskönyvek
+BATTLEPASS_QUEST_FINISH_SUMMER_STONE_HUNT	Nyári Metinkõ-vadászat befejezése
+BATTLEPASS_QUEST_GET_SILVER_COIN	Ezüstérme szerzése
+BATTLEPASS_QUEST_GET_STONE_BAG	Kõzsák szerzése
+BATTLEPASS_QUEST_HARVEST_HALLOWEEN_FLOWERS	Halloween-virágok gyûjtése
+BATTLEPASS_QUEST_KILL_BOSSES	Boss megölése
+BATTLEPASS_QUEST_KILL_MONSTERS	Szörny megölése
+BATTLEPASS_QUEST_KILL_PLAYERS	Játékos megölése
+BATTLEPASS_QUEST_MINING	Bányászat
+BATTLEPASS_QUEST_OPEN_CHESTS	Keresse meg és nyissa ki a ládákat.
+BATTLEPASS_QUEST_OPEN_EGGS	Tojás kinyitása
+BATTLEPASS_QUEST_OPEN_MYSTICAL_CHESTS	Misztikus ládák kinyitása
+BATTLEPASS_QUEST_RECHARGE_DEW_DRAGON	Harmat / Sárkányisten tárgy feltöltése
+BATTLEPASS_QUEST_REROLL_LUCKYBOX	Szerencsedobozok újradobása
+BATTLEPASS_QUEST_SELL_ITEMS_AT_PNJ	Tárgyak eladása NPC-nek
+BATTLEPASS_QUEST_SEND_GENERAL_CHAT_MESSAGES	Üzenetek küldése az általános chatben
+BATTLEPASS_QUEST_UPGRADE_CIRCUS_SKILLS	Cirkuszi képesség fejlesztése
+BATTLEPASS_QUEST_UPGRADE_EQUIPMENT	Felszerelés fejlesztése
+BATTLEPASS_QUEST_USE_SWITCH	Bûvölõtárgy használata
+BATTLEPASS_RESULT_CLAIMED	Ezt a jutalmat már átvetted.
+BATTLEPASS_RESULT_EXP	Battle Pass EXP szerzése: %d
+BATTLEPASS_RESULT_INVENTORY	Nincs elég hely a készletedben.
+BATTLEPASS_RESULT_LEVEL_UP	A Battle Pass szinted %d lett!
+BATTLEPASS_RESULT_LOCKED	Ez a jutalom a(z) %d. szinten oldódik fel.
+BATTLEPASS_RESULT_MISSION_DONE	Teljesítettél egy Battle Pass küldetést!
+BATTLEPASS_RESULT_NO_PREMIUM	A prémium jutalmakhoz Battle Pass Prémium szükséges.
+BATTLEPASS_RESULT_NO_SEASON	Jelenleg nincs aktív Battle Pass.
+BATTLEPASS_RESULT_PREMIUM_HAD	A Battle Pass Prémium már aktív.
+BATTLEPASS_RESULT_PREMIUM_ON	A Battle Pass Prémium aktiválva.
+BATTLEPASS_RESULT_REWARD	Battle Pass jutalmak átvéve (%d).
+BATTLEPASS_REWARD_TITLE	Jutalom
+BATTLEPASS_TITLE	Battlepass
+MINIMAP_TOOLTIP_BATTLEPASS	Battlepass
+MINIMAP_TOOLTIP_SHARE_POSITION	Ossza meg tartózkodási helyét a csevegésben

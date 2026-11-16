@@ -1,0 +1,98 @@
+BATTLEPASS_ALL_QUESTS_AVAILABLE	Toutes les quêtes sont disponibles
+BATTLEPASS_BONUS_CHEST	Coffre bonus
+BATTLEPASS_BONUS_CHEST_HELP	Après le niveau %d, chaque tranche de %d EXP supplémentaires vous donne automatiquement %d x %s. Vous pouvez gagner cette récompense à plusieurs reprises.
+BATTLEPASS_BONUS_CHEST_PREVIEW	Cliquez pour voir les récompenses possibles du coffre et leurs quantités.
+BATTLEPASS_BUY_EXP	Acheter EXP
+BATTLEPASS_BUY_PREMIUM_TOOLTIP	Acheter Premium
+BATTLEPASS_CLAIM_PREVIOUS_CONFIRM	Vous avez des récompenses précédentes disponibles. Voulez-vous toutes les récupérer avec la récompense sélectionnée ?
+BATTLEPASS_COMPLETED	Terminée
+BATTLEPASS_DEFAULT_QUEST	Mission Pass de combat
+BATTLEPASS_DEFAULT_QUEST_DESC	Terminer la mission
+BATTLEPASS_EXP_VALUE	%d EXP
+BATTLEPASS_FILTER_UNFINISHED	Afficher uniquement les missions non terminées
+BATTLEPASS_FREE_TITLE	GRATUIT
+BATTLEPASS_HEADER_TIME_LEFT	Expire dans : %s
+BATTLEPASS_LEVEL	Niveau
+BATTLEPASS_MISSION_UNLOCK_DATE	Déblocage le %s
+BATTLEPASS_NEW_QUEST_TIME	Nouvelle mission dans : %s
+BATTLEPASS_PREMIUM_TITLE	PREMIUM
+BATTLEPASS_QUEST_ADD_67_BONUS	Ajouter un bonus 6/7
+BATTLEPASS_QUEST_ADD_ORE	Ajouter du minerai
+BATTLEPASS_QUEST_BUILD_SANDCASTLE	Construisez un château de sable avec le seau.
+BATTLEPASS_QUEST_BUY_ITEM_TO_PNJ	Acheter des objets au PNJ
+BATTLEPASS_QUEST_BUY_ITEM_WITH_GAYA	Acheter un objet avec Gaya
+BATTLEPASS_QUEST_CATCH_FISH	Pêcher des poissons
+BATTLEPASS_QUEST_CATCH_HAUNTED_PEARLS	Attraper les perles maudites
+BATTLEPASS_QUEST_CRAFT_ITEMS	Fabriquer des objets
+BATTLEPASS_QUEST_DESC_67	Ajouter bonus 6 / 7
+BATTLEPASS_QUEST_DESC_BUY	Acheter aux PNJ
+BATTLEPASS_QUEST_DESC_CHAT	Écrire en chat général
+BATTLEPASS_QUEST_DESC_CHEST	Ouvrir des coffres
+BATTLEPASS_QUEST_DESC_CIRCUS	Chaque amélioration
+BATTLEPASS_QUEST_DESC_CRAFT	Fabriquer des objets
+BATTLEPASS_QUEST_DESC_DEW	Recharger Rosée / Dieu
+BATTLEPASS_QUEST_DESC_DUNGEON	Terminer des donjons
+BATTLEPASS_QUEST_DESC_EGG	Faire éclore des œufs
+BATTLEPASS_QUEST_DESC_FISH	Pêche
+BATTLEPASS_QUEST_DESC_FLOWERS	Les 4 types de fleurs
+BATTLEPASS_QUEST_DESC_GAYA	Acheter avec la Gaya
+BATTLEPASS_QUEST_DESC_HALLOWEEN_DAILY	Donjon d'Halloween du jour
+BATTLEPASS_QUEST_DESC_LEVEL_15	Écart max. : -15 niv.
+BATTLEPASS_QUEST_DESC_LEVEL_20	Écart max. : -20 niv.
+BATTLEPASS_QUEST_DESC_LUCKYBOX	Relancer les coffres
+BATTLEPASS_QUEST_DESC_MINING	Extraire du minerai
+BATTLEPASS_QUEST_DESC_MYSTICAL	Coffres mystiques
+BATTLEPASS_QUEST_DESC_ORE	Insérer du minerai
+BATTLEPASS_QUEST_DESC_PEARLS	Pêcher perles hantées
+BATTLEPASS_QUEST_DESC_PET	Nourrir son familier
+BATTLEPASS_QUEST_DESC_PLAYERS	Vaincre des joueurs
+BATTLEPASS_QUEST_DESC_QUEST_BOOK	Finir les livres de quête
+BATTLEPASS_QUEST_DESC_SANDCASTLE	Livrer un seau
+BATTLEPASS_QUEST_DESC_SELL	Vendre aux PNJ
+BATTLEPASS_QUEST_DESC_SHRINES	Détruire les sanctuaires
+BATTLEPASS_QUEST_DESC_SILVER	Gagner des pièces
+BATTLEPASS_QUEST_DESC_STONE_BAG	Obtenir des sacs
+BATTLEPASS_QUEST_DESC_STONE_HUNT	Chasse aux pierres
+BATTLEPASS_QUEST_DESC_SWITCH	Changer les bonus
+BATTLEPASS_QUEST_DESC_TARGET_METIN	Détruire le Metin ciblé
+BATTLEPASS_QUEST_DESC_UPGRADE	Améliorer l'équipement
+BATTLEPASS_QUEST_DESTROY_METIN_STONES	Détruire des Pierres Metin
+BATTLEPASS_QUEST_DESTROY_SUMMER_SHRINES	Détruisez les Metins du temple d'été !
+BATTLEPASS_QUEST_DESTROY_TARGET_METIN	Détruire une Pierre Metin précise
+BATTLEPASS_QUEST_FEED_PET	Nourrir le familier
+BATTLEPASS_QUEST_FINISH_DUNGEON	Terminer un donjon
+BATTLEPASS_QUEST_FINISH_HALLOWEEN_DAILY	Récupérer les récompenses de la roue quotidienne d'Halloween
+BATTLEPASS_QUEST_FINISH_QUEST_BOOK	Compléter les livres de missions
+BATTLEPASS_QUEST_FINISH_SUMMER_STONE_HUNT	Terminer la chasse aux Metins d'été
+BATTLEPASS_QUEST_GET_SILVER_COIN	Obtenir des pieces d'argent
+BATTLEPASS_QUEST_GET_STONE_BAG	Obtenir un Sac à Pierres
+BATTLEPASS_QUEST_HARVEST_HALLOWEEN_FLOWERS	Récolter les fleurs d'Halloween
+BATTLEPASS_QUEST_KILL_BOSSES	Tuer des Boss
+BATTLEPASS_QUEST_KILL_MONSTERS	Tuer des monstres
+BATTLEPASS_QUEST_KILL_PLAYERS	Tuer des joueurs
+BATTLEPASS_QUEST_MINING	Miner
+BATTLEPASS_QUEST_OPEN_CHESTS	Ouvrir des coffres
+BATTLEPASS_QUEST_OPEN_EGGS	Ouvrir des œufs
+BATTLEPASS_QUEST_OPEN_MYSTICAL_CHESTS	Ouvrir des coffres mystiques
+BATTLEPASS_QUEST_RECHARGE_DEW_DRAGON	Recharger Rosée / Dieu Dragon
+BATTLEPASS_QUEST_REROLL_LUCKYBOX	Relancer les boites chanceuses
+BATTLEPASS_QUEST_SELL_ITEMS_AT_PNJ	Vendre des objets au PNJ
+BATTLEPASS_QUEST_SEND_GENERAL_CHAT_MESSAGES	Envoyer des messages dans le chat général
+BATTLEPASS_QUEST_UPGRADE_CIRCUS_SKILLS	Maîtrise des compétences du cirque
+BATTLEPASS_QUEST_UPGRADE_EQUIPMENT	Améliorer l’équipement
+BATTLEPASS_QUEST_USE_SWITCH	Utiliser un Switch
+BATTLEPASS_RESULT_CLAIMED	Vous avez déjà récupéré cette récompense.
+BATTLEPASS_RESULT_EXP	Vous avez gagné de l'EXP du Passe de combat : %d
+BATTLEPASS_RESULT_INVENTORY	Vous n'avez pas assez de place dans votre inventaire.
+BATTLEPASS_RESULT_LEVEL_UP	Votre niveau du Passe de combat est passé à %d !
+BATTLEPASS_RESULT_LOCKED	Cette récompense se débloque au niveau %d.
+BATTLEPASS_RESULT_MISSION_DONE	Vous avez terminé une quête du Passe de combat !
+BATTLEPASS_RESULT_NO_PREMIUM	Le Passe de combat Premium est requis pour les récompenses Premium.
+BATTLEPASS_RESULT_NO_SEASON	Aucun Passe de combat n'est actif pour le moment.
+BATTLEPASS_RESULT_PREMIUM_HAD	Le Passe de combat Premium est déjà actif.
+BATTLEPASS_RESULT_PREMIUM_ON	Le Passe de combat Premium a été activé.
+BATTLEPASS_RESULT_REWARD	Récompenses du Passe de combat récupérées (%d).
+BATTLEPASS_REWARD_TITLE	Récompense
+BATTLEPASS_TITLE	Passe de combat
+MINIMAP_TOOLTIP_BATTLEPASS	Passe de combat
+MINIMAP_TOOLTIP_SHARE_POSITION	Partager votre position dans le chat

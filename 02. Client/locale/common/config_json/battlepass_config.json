@@ -1,0 +1,2380 @@
+{
+  "version": 2,
+  "date_key_format": "YYYY-MM-DD",
+  "datetime_format": "YYYY-MM-DDTHH:MM:SS",
+  "default_battlepasses": [
+    {
+      "season_id": 8,
+      "start_date": "2026-08-01T00:00:00",
+      "end_date": "2026-08-31T23:59:59",
+      "max_level_bonus_reward": {
+        "vnum": 33200,
+        "count": 1
+      },
+      "quest_schedule": {
+        "2026-08-01": {
+          "schedule_id": 1,
+          "missions": [
+            {
+              "mission": "KILL_MONSTER",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 101
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 250,
+              "exp": 25,
+              "mission_id": 102
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 25,
+              "exp": 30,
+              "mission_id": 103
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 300,
+              "exp": 25,
+              "mission_id": 104
+            },
+            {
+              "mission": "SEND_MSG_GENERAL_CHAT",
+              "count": 50,
+              "exp": 25,
+              "mission_id": 205
+            }
+          ]
+        },
+        "2026-08-07": {
+          "schedule_id": 2,
+          "missions": [
+            {
+              "mission": "KILL_BOSS",
+              "count": 40,
+              "exp": 30,
+              "mission_id": 201
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 60,
+              "exp": 25,
+              "mission_id": 202
+            },
+            {
+              "mission": "UPGRADE_STUFF",
+              "count": 20,
+              "exp": 30,
+              "mission_id": 203
+            },
+            {
+              "mission": "BUY_ITEM_GAYA",
+              "count": 10,
+              "exp": 25,
+              "mission_id": 204
+            },
+            {
+              "mission": "FEED_PET",
+              "count": 10,
+              "exp": 25,
+              "mission_id": 105
+            }
+          ]
+        },
+        "2026-08-14": {
+          "schedule_id": 3,
+          "missions": [
+            {
+              "mission": "MINING",
+              "count": 500,
+              "exp": 30,
+              "mission_id": 301
+            },
+            {
+              "mission": "GET_SPIRIT_SHARD",
+              "count": 250,
+              "exp": 25,
+              "mission_id": 302
+            },
+            {
+              "mission": "CRAFT_ITEMS",
+              "count": 15,
+              "exp": 25,
+              "mission_id": 303
+            },
+            {
+              "mission": "ADD_ORE",
+              "count": 15,
+              "exp": 25,
+              "mission_id": 304
+            },
+            {
+              "mission": "FINISH_QUEST_BOOK",
+              "count": 10,
+              "exp": 30,
+              "mission_id": 305
+            }
+          ]
+        },
+        "2026-08-21": {
+          "schedule_id": 4,
+          "missions": [
+            {
+              "mission": "USE_SWITCH",
+              "count": 500,
+              "exp": 20,
+              "mission_id": 401
+            },
+            {
+              "mission": "ADD_67_BONUS",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 402
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 20,
+              "exp": 20,
+              "mission_id": 403
+            },
+            {
+              "mission": "SELL_ITEMS_AT_PNJ",
+              "count": 200,
+              "exp": 20,
+              "mission_id": 404
+            },
+            {
+              "mission": "RECHARGE_DEW_DRAGON",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 405
+            }
+          ]
+        },
+        "2026-08-28": {
+          "schedule_id": 5,
+          "missions": [
+            {
+              "mission": "KILL_MONSTER",
+              "count": 7500,
+              "exp": 20,
+              "mission_id": 501
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 350,
+              "exp": 20,
+              "mission_id": 502
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 60,
+              "exp": 20,
+              "mission_id": 503
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 30,
+              "exp": 20,
+              "mission_id": 504
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 80,
+              "exp": 20,
+              "mission_id": 505
+            }
+          ]
+        }
+      },
+      "rewards": {
+        "0": {
+          "free": {
+            "vnum": 76053,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94124,
+            "count": 1
+          }
+        },
+        "1": {
+          "free": {
+            "vnum": 71151,
+            "count": 250
+          },
+          "premium": {
+            "vnum": 71052,
+            "count": 500
+          }
+        },
+        "2": {
+          "free": {
+            "vnum": 61703,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 71001,
+            "count": 10
+          }
+        },
+        "3": {
+          "free": {
+            "vnum": 61600,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 71094,
+            "count": 10
+          }
+        },
+        "4": {
+          "free": {
+            "vnum": 65150,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 98500,
+            "count": 20
+          }
+        },
+        "5": {
+          "free": {
+            "vnum": 70102,
+            "count": 50
+          },
+          "premium": {
+            "vnum": 50513,
+            "count": 10
+          }
+        },
+        "6": {
+          "free": {
+            "vnum": 94800,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94872,
+            "count": 1
+          }
+        },
+        "7": {
+          "free": {
+            "vnum": 65010,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 71084,
+            "count": 1000
+          }
+        },
+        "8": {
+          "free": {
+            "vnum": 60052,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 60053,
+            "count": 5
+          }
+        },
+        "9": {
+          "free": {
+            "vnum": 40023,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 70029,
+            "count": 5
+          }
+        },
+        "10": {
+          "free": {
+            "vnum": 65200,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65155,
+            "count": 50
+          }
+        },
+        "11": {
+          "free": {
+            "vnum": 65131,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65131,
+            "count": 5
+          }
+        },
+        "12": {
+          "free": {
+            "vnum": 65012,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 25046,
+            "count": 10
+          }
+        },
+        "13": {
+          "free": {
+            "vnum": 61606,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 61601,
+            "count": 2
+          }
+        },
+        "14": {
+          "free": {
+            "vnum": 65132,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65132,
+            "count": 2
+          }
+        },
+        "15": {
+          "free": {
+            "vnum": 60054,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 60055,
+            "count": 5
+          }
+        },
+        "16": {
+          "free": {
+            "vnum": 25049,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 25050,
+            "count": 5
+          }
+        },
+        "17": {
+          "free": {
+            "vnum": 65172,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 65173,
+            "count": 1
+          }
+        },
+        "18": {
+          "free": {
+            "vnum": 72346,
+            "count": 15
+          },
+          "premium": {
+            "vnum": 96353,
+            "count": 5
+          }
+        },
+        "19": {
+          "free": {
+            "vnum": 61706,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 90020,
+            "count": 1
+          }
+        }
+      }
+    },
+    {
+      "season_id": 9,
+      "start_date": "2026-09-01T00:00:00",
+      "end_date": "2026-09-30T23:59:59",
+      "max_level_bonus_reward": {
+        "vnum": 33200,
+        "count": 1
+      },
+      "quest_schedule": {
+        "2026-09-01": {
+          "schedule_id": 1,
+          "missions": [
+            {
+              "mission": "KILL_MONSTER",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 101
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 250,
+              "exp": 25,
+              "mission_id": 102
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 25,
+              "exp": 30,
+              "mission_id": 103
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 300,
+              "exp": 25,
+              "mission_id": 104
+            },
+            {
+              "mission": "SEND_MSG_GENERAL_CHAT",
+              "count": 50,
+              "exp": 25,
+              "mission_id": 205
+            }
+          ]
+        },
+        "2026-09-07": {
+          "schedule_id": 2,
+          "missions": [
+            {
+              "mission": "KILL_BOSS",
+              "count": 40,
+              "exp": 30,
+              "mission_id": 201
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 60,
+              "exp": 25,
+              "mission_id": 202
+            },
+            {
+              "mission": "UPGRADE_STUFF",
+              "count": 20,
+              "exp": 30,
+              "mission_id": 203
+            },
+            {
+              "mission": "BUY_ITEM_GAYA",
+              "count": 10,
+              "exp": 25,
+              "mission_id": 204
+            },
+            {
+              "mission": "FEED_PET",
+              "count": 10,
+              "exp": 25,
+              "mission_id": 105
+            }
+          ]
+        },
+        "2026-09-14": {
+          "schedule_id": 3,
+          "missions": [
+            {
+              "mission": "MINING",
+              "count": 500,
+              "exp": 30,
+              "mission_id": 301
+            },
+            {
+              "mission": "GET_SPIRIT_SHARD",
+              "count": 250,
+              "exp": 25,
+              "mission_id": 302
+            },
+            {
+              "mission": "CRAFT_ITEMS",
+              "count": 15,
+              "exp": 25,
+              "mission_id": 303
+            },
+            {
+              "mission": "ADD_ORE",
+              "count": 15,
+              "exp": 25,
+              "mission_id": 304
+            },
+            {
+              "mission": "FINISH_QUEST_BOOK",
+              "count": 10,
+              "exp": 30,
+              "mission_id": 305
+            }
+          ]
+        },
+        "2026-09-21": {
+          "schedule_id": 4,
+          "missions": [
+            {
+              "mission": "USE_SWITCH",
+              "count": 500,
+              "exp": 20,
+              "mission_id": 401
+            },
+            {
+              "mission": "ADD_67_BONUS",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 402
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 20,
+              "exp": 20,
+              "mission_id": 403
+            },
+            {
+              "mission": "SELL_ITEMS_AT_PNJ",
+              "count": 200,
+              "exp": 20,
+              "mission_id": 404
+            },
+            {
+              "mission": "RECHARGE_DEW_DRAGON",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 405
+            }
+          ]
+        },
+        "2026-09-28": {
+          "schedule_id": 5,
+          "missions": [
+            {
+              "mission": "KILL_MONSTER",
+              "count": 7500,
+              "exp": 20,
+              "mission_id": 501
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 350,
+              "exp": 20,
+              "mission_id": 502
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 60,
+              "exp": 20,
+              "mission_id": 503
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 30,
+              "exp": 20,
+              "mission_id": 504
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 80,
+              "exp": 20,
+              "mission_id": 505
+            }
+          ]
+        }
+      },
+      "rewards": {
+        "0": {
+          "free": {
+            "vnum": 76053,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94124,
+            "count": 1
+          }
+        },
+        "1": {
+          "free": {
+            "vnum": 71151,
+            "count": 250
+          },
+          "premium": {
+            "vnum": 71052,
+            "count": 500
+          }
+        },
+        "2": {
+          "free": {
+            "vnum": 61703,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 71001,
+            "count": 10
+          }
+        },
+        "3": {
+          "free": {
+            "vnum": 61600,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 71094,
+            "count": 10
+          }
+        },
+        "4": {
+          "free": {
+            "vnum": 65150,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 98500,
+            "count": 20
+          }
+        },
+        "5": {
+          "free": {
+            "vnum": 70102,
+            "count": 50
+          },
+          "premium": {
+            "vnum": 50513,
+            "count": 10
+          }
+        },
+        "6": {
+          "free": {
+            "vnum": 94800,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94872,
+            "count": 1
+          }
+        },
+        "7": {
+          "free": {
+            "vnum": 65010,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 71084,
+            "count": 1000
+          }
+        },
+        "8": {
+          "free": {
+            "vnum": 60052,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 60053,
+            "count": 5
+          }
+        },
+        "9": {
+          "free": {
+            "vnum": 40023,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 70029,
+            "count": 5
+          }
+        },
+        "10": {
+          "free": {
+            "vnum": 65200,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65155,
+            "count": 50
+          }
+        },
+        "11": {
+          "free": {
+            "vnum": 65131,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65131,
+            "count": 5
+          }
+        },
+        "12": {
+          "free": {
+            "vnum": 65012,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 25046,
+            "count": 10
+          }
+        },
+        "13": {
+          "free": {
+            "vnum": 61606,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 61601,
+            "count": 2
+          }
+        },
+        "14": {
+          "free": {
+            "vnum": 65132,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65132,
+            "count": 2
+          }
+        },
+        "15": {
+          "free": {
+            "vnum": 60054,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 60055,
+            "count": 5
+          }
+        },
+        "16": {
+          "free": {
+            "vnum": 25049,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 25050,
+            "count": 5
+          }
+        },
+        "17": {
+          "free": {
+            "vnum": 65172,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 65173,
+            "count": 1
+          }
+        },
+        "18": {
+          "free": {
+            "vnum": 72346,
+            "count": 15
+          },
+          "premium": {
+            "vnum": 96353,
+            "count": 5
+          }
+        },
+        "19": {
+          "free": {
+            "vnum": 61706,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 90020,
+            "count": 1
+          }
+        }
+      }
+    },
+    {
+      "season_id": 10,
+      "start_date": "2026-10-01T00:00:00",
+      "end_date": "2026-10-31T23:59:59",
+      "max_level_bonus_reward": {
+        "vnum": 33200,
+        "count": 1
+      },
+      "quest_schedule": {
+        "2026-10-01": {
+          "schedule_id": 1,
+          "missions": [
+            {
+              "mission": "KILL_MONSTER",
+              "count": 50000,
+              "exp": 25,
+              "mission_id": 101
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 102
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 100,
+              "exp": 30,
+              "mission_id": 103
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 500,
+              "exp": 25,
+              "mission_id": 104
+            },
+            {
+              "mission": "SEND_MSG_GENERAL_CHAT",
+              "count": 50,
+              "exp": 25,
+              "mission_id": 105
+            }
+          ]
+        },
+        "2026-10-07": {
+          "schedule_id": 2,
+          "missions": [
+            {
+              "mission": "KILL_BOSS",
+              "count": 200,
+              "exp": 30,
+              "mission_id": 201
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 100,
+              "exp": 25,
+              "mission_id": 202
+            },
+            {
+              "mission": "UPGRADE_STUFF",
+              "count": 30,
+              "exp": 30,
+              "mission_id": 203
+            },
+            {
+              "mission": "BUY_ITEM_GAYA",
+              "count": 30,
+              "exp": 25,
+              "mission_id": 204
+            },
+            {
+              "mission": "FEED_PET",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 205
+            }
+          ]
+        },
+        "2026-10-14": {
+          "schedule_id": 3,
+          "missions": [
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 30,
+              "mission_id": 301
+            },
+            {
+              "mission": "GET_SPIRIT_SHARD",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 302
+            },
+            {
+              "mission": "ADD_67_BONUS",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 303
+            },
+            {
+              "mission": "ADD_ORE",
+              "count": 15,
+              "exp": 25,
+              "mission_id": 304
+            },
+            {
+              "mission": "FINISH_QUEST_BOOK",
+              "count": 50,
+              "exp": 30,
+              "mission_id": 305
+            }
+          ]
+        },
+        "2026-10-21": {
+          "schedule_id": 4,
+          "missions": [
+            {
+              "mission": "KILL_BOSS",
+              "count": 100,
+              "exp": 20,
+              "mission_id": 401
+            },
+            {
+              "mission": "CRAFT_ITEMS",
+              "count": 100,
+              "exp": 25,
+              "mission_id": 402
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 50,
+              "exp": 20,
+              "mission_id": 403
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 2500,
+              "exp": 20,
+              "mission_id": 404
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 25000,
+              "exp": 20,
+              "mission_id": 405
+            }
+          ]
+        },
+        "2026-10-28": {
+          "schedule_id": 5,
+          "missions": [
+            {
+              "mission": "RECHARGE_DEW_DRAGON",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 501
+            },
+            {
+              "mission": "SELL_ITEMS_AT_PNJ",
+              "count": 500,
+              "exp": 20,
+              "mission_id": 502
+            },
+            {
+              "mission": "USE_SWITCH",
+              "count": 2500,
+              "exp": 20,
+              "mission_id": 503
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 30,
+              "exp": 20,
+              "mission_id": 504
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 80,
+              "exp": 20,
+              "mission_id": 505
+            }
+          ]
+        }
+      },
+      "rewards": {
+        "0": {
+          "free": {
+            "vnum": 76053,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94124,
+            "count": 1
+          }
+        },
+        "1": {
+          "free": {
+            "vnum": 71052,
+            "count": 500
+          },
+          "premium": {
+            "vnum": 71084,
+            "count": 1000
+          }
+        },
+        "2": {
+          "free": {
+            "vnum": 61701,
+            "count": 250
+          },
+          "premium": {
+            "vnum": 61701,
+            "count": 1000
+          }
+        },
+        "3": {
+          "free": {
+            "vnum": 94106,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94106,
+            "count": 3
+          }
+        },
+        "4": {
+          "free": {
+            "vnum": 65181,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65181,
+            "count": 3
+          }
+        },
+        "5": {
+          "free": {
+            "vnum": 27802,
+            "count": 150
+          },
+          "premium": {
+            "vnum": 27802,
+            "count": 500
+          }
+        },
+        "6": {
+          "free": {
+            "vnum": 94800,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94872,
+            "count": 1
+          }
+        },
+        "7": {
+          "free": {
+            "vnum": 71084,
+            "count": 500
+          },
+          "premium": {
+            "vnum": 65155,
+            "count": 500
+          }
+        },
+        "8": {
+          "free": {
+            "vnum": 65181,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65181,
+            "count": 5
+          }
+        },
+        "9": {
+          "free": {
+            "vnum": 25049,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 5
+          }
+        },
+        "10": {
+          "free": {
+            "vnum": 65200,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65157,
+            "count": 150
+          }
+        },
+        "11": {
+          "free": {
+            "vnum": 61606,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 72346,
+            "count": 10
+          }
+        },
+        "12": {
+          "free": {
+            "vnum": 65131,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 65132,
+            "count": 2
+          }
+        },
+        "13": {
+          "free": {
+            "vnum": 25050,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 5
+          }
+        },
+        "14": {
+          "free": {
+            "vnum": 65171,
+            "count": 15
+          },
+          "premium": {
+            "vnum": 65171,
+            "count": 30
+          }
+        },
+        "15": {
+          "free": {
+            "vnum": 96352,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 96353,
+            "count": 5
+          }
+        },
+        "16": {
+          "free": {
+            "vnum": 60056,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 60057,
+            "count": 2
+          }
+        },
+        "17": {
+          "free": {
+            "vnum": 61704,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 10
+          }
+        },
+        "18": {
+          "free": {
+            "vnum": 72346,
+            "count": 10
+          },
+          "premium": {
+            "vnum": 65158,
+            "count": 50
+          }
+        },
+        "19": {
+          "free": {
+            "vnum": 61706,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 90020,
+            "count": 1
+          }
+        }
+      }
+    },
+    {
+      "season_id": 11,
+      "start_date": "2026-11-01T00:00:00",
+      "end_date": "2026-11-30T23:59:59",
+      "max_level_bonus_reward": {
+        "vnum": 33200,
+        "count": 1
+      },
+      "quest_schedule": {
+        "2026-11-01": {
+          "schedule_id": 1,
+          "missions": [
+            {
+              "mission": "KILL_MONSTER",
+              "count": 50000,
+              "exp": 25,
+              "mission_id": 101
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 102
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 100,
+              "exp": 30,
+              "mission_id": 103
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 500,
+              "exp": 25,
+              "mission_id": 104
+            },
+            {
+              "mission": "SEND_MSG_GENERAL_CHAT",
+              "count": 50,
+              "exp": 25,
+              "mission_id": 105
+            }
+          ]
+        },
+        "2026-11-07": {
+          "schedule_id": 2,
+          "missions": [
+            {
+              "mission": "KILL_BOSS",
+              "count": 200,
+              "exp": 30,
+              "mission_id": 201
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 100,
+              "exp": 25,
+              "mission_id": 202
+            },
+            {
+              "mission": "UPGRADE_STUFF",
+              "count": 30,
+              "exp": 30,
+              "mission_id": 203
+            },
+            {
+              "mission": "BUY_ITEM_GAYA",
+              "count": 30,
+              "exp": 25,
+              "mission_id": 204
+            },
+            {
+              "mission": "FEED_PET",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 205
+            }
+          ]
+        },
+        "2026-11-14": {
+          "schedule_id": 3,
+          "missions": [
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 30,
+              "mission_id": 301
+            },
+            {
+              "mission": "GET_SPIRIT_SHARD",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 302
+            },
+            {
+              "mission": "USE_SWITCH",
+              "count": 500,
+              "exp": 20,
+              "mission_id": 303
+            },
+            {
+              "mission": "ADD_ORE",
+              "count": 15,
+              "exp": 25,
+              "mission_id": 304
+            },
+            {
+              "mission": "FINISH_QUEST_BOOK",
+              "count": 50,
+              "exp": 30,
+              "mission_id": 305
+            }
+          ]
+        },
+        "2026-11-21": {
+          "schedule_id": 4,
+          "missions": [
+            {
+              "mission": "KILL_BOSS",
+              "count": 100,
+              "exp": 20,
+              "mission_id": 401
+            },
+            {
+              "mission": "CRAFT_ITEMS",
+              "count": 100,
+              "exp": 25,
+              "mission_id": 402
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 50,
+              "exp": 20,
+              "mission_id": 403
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 2500,
+              "exp": 20,
+              "mission_id": 404
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 25000,
+              "exp": 20,
+              "mission_id": 405
+            }
+          ]
+        },
+        "2026-11-28": {
+          "schedule_id": 5,
+          "missions": [
+            {
+              "mission": "RECHARGE_DEW_DRAGON",
+              "count": 10,
+              "exp": 20,
+              "mission_id": 501
+            },
+            {
+              "mission": "SELL_ITEMS_AT_PNJ",
+              "count": 500,
+              "exp": 20,
+              "mission_id": 502
+            },
+            {
+              "mission": "USE_SWITCH",
+              "count": 2500,
+              "exp": 20,
+              "mission_id": 503
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 30,
+              "exp": 20,
+              "mission_id": 504
+            },
+            {
+              "mission": "OPEN_CHEST",
+              "count": 80,
+              "exp": 20,
+              "mission_id": 505
+            }
+          ]
+        }
+      },
+      "rewards": {
+        "0": {
+          "free": {
+            "vnum": 76053,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94124,
+            "count": 1
+          }
+        },
+        "1": {
+          "free": {
+            "vnum": 71052,
+            "count": 500
+          },
+          "premium": {
+            "vnum": 71084,
+            "count": 1000
+          }
+        },
+        "2": {
+          "free": {
+            "vnum": 61701,
+            "count": 250
+          },
+          "premium": {
+            "vnum": 61701,
+            "count": 1000
+          }
+        },
+        "3": {
+          "free": {
+            "vnum": 94106,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94106,
+            "count": 3
+          }
+        },
+        "4": {
+          "free": {
+            "vnum": 65181,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65181,
+            "count": 3
+          }
+        },
+        "5": {
+          "free": {
+            "vnum": 27802,
+            "count": 150
+          },
+          "premium": {
+            "vnum": 27802,
+            "count": 500
+          }
+        },
+        "6": {
+          "free": {
+            "vnum": 94800,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94872,
+            "count": 1
+          }
+        },
+        "7": {
+          "free": {
+            "vnum": 71084,
+            "count": 500
+          },
+          "premium": {
+            "vnum": 65155,
+            "count": 500
+          }
+        },
+        "8": {
+          "free": {
+            "vnum": 65181,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65181,
+            "count": 5
+          }
+        },
+        "9": {
+          "free": {
+            "vnum": 25049,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 5
+          }
+        },
+        "10": {
+          "free": {
+            "vnum": 65200,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65157,
+            "count": 150
+          }
+        },
+        "11": {
+          "free": {
+            "vnum": 61606,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 72346,
+            "count": 10
+          }
+        },
+        "12": {
+          "free": {
+            "vnum": 65131,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 65132,
+            "count": 2
+          }
+        },
+        "13": {
+          "free": {
+            "vnum": 25050,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 5
+          }
+        },
+        "14": {
+          "free": {
+            "vnum": 65171,
+            "count": 15
+          },
+          "premium": {
+            "vnum": 65171,
+            "count": 30
+          }
+        },
+        "15": {
+          "free": {
+            "vnum": 96352,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 96353,
+            "count": 5
+          }
+        },
+        "16": {
+          "free": {
+            "vnum": 60056,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 60057,
+            "count": 2
+          }
+        },
+        "17": {
+          "free": {
+            "vnum": 61704,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 10
+          }
+        },
+        "18": {
+          "free": {
+            "vnum": 72346,
+            "count": 10
+          },
+          "premium": {
+            "vnum": 65158,
+            "count": 50
+          }
+        },
+        "19": {
+          "free": {
+            "vnum": 61706,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 90020,
+            "count": 1
+          }
+        }
+      }
+    }
+  ],
+  "event_battlepasses": [
+    {
+      "season_id": 3,
+      "is_activated": true,
+      "start_date": "2026-08-15T13:00:00",
+      "end_date": "2026-08-30T23:59:59",
+      "max_level_bonus_reward": {
+        "vnum": 33204,
+        "count": 1
+      },
+      "max_level_bonus_exp": 100,
+      "quest_schedule": {
+        "2026-08-13": {
+          "schedule_id": 1,
+          "missions": [
+            {
+              "mission": "BUILD_SANDCASTLE",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 1001
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 1002
+            },
+            {
+              "mission": "OPEN_MYSTICAL_CHEST",
+              "vnum": 33204,
+              "count": 15,
+              "exp": 25,
+              "mission_id": 1003
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 600,
+              "exp": 25,
+              "mission_id": 1004
+            }
+          ]
+        },
+        "2026-08-16": {
+          "schedule_id": 2,
+          "missions": [
+            {
+              "mission": "DESTROY_TARGET_METIN",
+              "vnum": 8885,
+              "count": 25,
+              "exp": 25,
+              "mission_id": 2001
+            },
+            {
+              "mission": "FINISH_SUMMER_STONE_HUNT",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 2002
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 75,
+              "exp": 25,
+              "mission_id": 2003
+            },
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 2004
+            }
+          ]
+        },
+        "2026-08-19": {
+          "schedule_id": 3,
+          "missions": [
+            {
+              "mission": "DESTROY_SUMMER_SHRINES",
+              "count": 100,
+              "exp": 25,
+              "mission_id": 3001
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 25,
+              "exp": 25,
+              "mission_id": 3003
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 40,
+              "exp": 25,
+              "mission_id": 3004
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 10000,
+              "exp": 25,
+              "mission_id": 3005
+            }
+          ]
+        },
+        "2026-08-22": {
+          "schedule_id": 4,
+          "missions": [
+            {
+              "mission": "BUILD_SANDCASTLE",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 4001
+            },
+            {
+              "mission": "DESTROY_TARGET_METIN",
+              "vnum": 8885,
+              "count": 25,
+              "exp": 25,
+              "mission_id": 4002
+            },
+            {
+              "mission": "OPEN_MYSTICAL_CHEST",
+              "vnum": 33204,
+              "count": 5,
+              "exp": 25,
+              "mission_id": 4003
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 600,
+              "exp": 25,
+              "mission_id": 4004
+            }
+          ]
+        },
+        "2026-08-25": {
+          "schedule_id": 5,
+          "missions": [
+            {
+              "mission": "DESTROY_SUMMER_SHRINES",
+              "count": 100,
+              "exp": 25,
+              "mission_id": 5001
+            },
+            {
+              "mission": "FINISH_SUMMER_STONE_HUNT",
+              "count": 3,
+              "exp": 25,
+              "mission_id": 5003
+            },
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 5004
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 10000,
+              "exp": 25,
+              "mission_id": 5005
+            }
+          ]
+        }
+      },
+      "rewards": {
+        "0": {
+          "free": {
+            "vnum": 76053,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94124,
+            "count": 1
+          }
+        },
+        "1": {
+          "free": {
+            "vnum": 61600,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 71084,
+            "count": 500
+          }
+        },
+        "2": {
+          "free": {
+            "vnum": 61703,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 95087,
+            "count": 1
+          }
+        },
+        "3": {
+          "free": {
+            "vnum": 40023,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 39063,
+            "count": 3
+          }
+        },
+        "4": {
+          "free": {
+            "vnum": 61606,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 55320,
+            "count": 1
+          }
+        },
+        "5": {
+          "free": {
+            "vnum": 71052,
+            "count": 500
+          },
+          "premium": {
+            "vnum": 61601,
+            "count": 3
+          }
+        },
+        "6": {
+          "free": {
+            "vnum": 65200,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 33204,
+            "count": 1
+          }
+        },
+        "7": {
+          "free": {
+            "vnum": 39063,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65131,
+            "count": 5
+          }
+        },
+        "8": {
+          "free": {
+            "vnum": 95087,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65157,
+            "count": 50
+          }
+        },
+        "9": {
+          "free": {
+            "vnum": 71084,
+            "count": 250
+          },
+          "premium": {
+            "vnum": 65172,
+            "count": 3
+          }
+        },
+        "10": {
+          "free": {
+            "vnum": 55320,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 25049,
+            "count": 3
+          }
+        },
+        "11": {
+          "free": {
+            "vnum": 65131,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65155,
+            "count": 100
+          }
+        },
+        "12": {
+          "free": {
+            "vnum": 65172,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65132,
+            "count": 1
+          }
+        },
+        "13": {
+          "free": {
+            "vnum": 25049,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 33204,
+            "count": 1
+          }
+        },
+        "14": {
+          "free": {
+            "vnum": 96353,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 25046,
+            "count": 3
+          }
+        },
+        "15": {
+          "free": {
+            "vnum": 65132,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 25050,
+            "count": 1
+          }
+        },
+        "16": {
+          "free": {
+            "vnum": 95087,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 61702,
+            "count": 3
+          }
+        },
+        "17": {
+          "free": {
+            "vnum": 40804,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 96353,
+            "count": 5
+          }
+        },
+        "18": {
+          "free": {
+            "vnum": 72346,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 55310,
+            "count": 1
+          }
+        },
+        "19": {
+          "free": {
+            "vnum": 94119,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 33204,
+            "count": 1
+          }
+        }
+      }
+    },
+    {
+      "season_id": 4,
+      "is_activated": true,
+      "theme": "halloween",
+      "start_date": "2026-10-16T16:00:00",
+      "end_date": "2026-11-08T23:59:59",
+      "max_level_bonus_reward": {
+        "vnum": 33205,
+        "count": 1
+      },
+      "max_level_bonus_exp": 100,
+      "level_exp": 35,
+      "quest_schedule": {
+        "2026-10-16": {
+          "schedule_id": 1,
+          "missions": [
+            {
+              "mission": "UPGRADE_CIRCUS_SKILLS",
+              "count": 50,
+              "exp": 25,
+              "mission_id": 1001
+            },
+            {
+              "mission": "OPEN_MYSTICAL_CHEST",
+              "vnum": 33205,
+              "count": 15,
+              "exp": 25,
+              "mission_id": 1002
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 1006
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 600,
+              "exp": 25,
+              "mission_id": 1007
+            }
+          ]
+        },
+        "2026-10-19": {
+          "schedule_id": 2,
+          "missions": [
+            {
+              "mission": "HARVEST_HALLOWEEN_FLOWERS",
+              "count": 25,
+              "exp": 25,
+              "mission_id": 1003
+            },
+            {
+              "mission": "FINISH_HALLOWEEN_DAILY",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 1005
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 75,
+              "exp": 25,
+              "mission_id": 2006
+            },
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 2007
+            }
+          ]
+        },
+        "2026-10-22": {
+          "schedule_id": 3,
+          "missions": [
+            {
+              "mission": "CATCH_HAUNTED_PEARLS",
+              "vnum": 40726,
+              "count": 25,
+              "exp": 25,
+              "mission_id": 1004
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 25,
+              "exp": 25,
+              "mission_id": 3006
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 40,
+              "exp": 25,
+              "mission_id": 3007
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 10000,
+              "exp": 25,
+              "mission_id": 3008
+            }
+          ]
+        },
+        "2026-10-25": {
+          "schedule_id": 4,
+          "missions": [
+            {
+              "mission": "UPGRADE_CIRCUS_SKILLS",
+              "count": 50,
+              "exp": 25,
+              "mission_id": 2001
+            },
+            {
+              "mission": "OPEN_MYSTICAL_CHEST",
+              "vnum": 33205,
+              "count": 15,
+              "exp": 25,
+              "mission_id": 2002
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 4006
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 600,
+              "exp": 25,
+              "mission_id": 4007
+            }
+          ]
+        },
+        "2026-10-28": {
+          "schedule_id": 5,
+          "missions": [
+            {
+              "mission": "HARVEST_HALLOWEEN_FLOWERS",
+              "count": 25,
+              "exp": 25,
+              "mission_id": 2003
+            },
+            {
+              "mission": "FINISH_HALLOWEEN_DAILY",
+              "count": 5,
+              "exp": 25,
+              "mission_id": 2005
+            },
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 5006
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 10000,
+              "exp": 25,
+              "mission_id": 5007
+            }
+          ]
+        },
+        "2026-10-31": {
+          "schedule_id": 6,
+          "missions": [
+            {
+              "mission": "CATCH_HAUNTED_PEARLS",
+              "vnum": 40726,
+              "count": 25,
+              "exp": 25,
+              "mission_id": 2004
+            },
+            {
+              "mission": "UPGRADE_CIRCUS_SKILLS",
+              "count": 20,
+              "exp": 25,
+              "mission_id": 3001
+            },
+            {
+              "mission": "DESTROY_METIN",
+              "count": 5000,
+              "exp": 25,
+              "mission_id": 6006
+            },
+            {
+              "mission": "KILL_BOSS",
+              "count": 40,
+              "exp": 25,
+              "mission_id": 6007
+            }
+          ]
+        },
+        "2026-11-03": {
+          "schedule_id": 7,
+          "missions": [
+            {
+              "mission": "HARVEST_HALLOWEEN_FLOWERS",
+              "count": 10,
+              "exp": 25,
+              "mission_id": 3003
+            },
+            {
+              "mission": "FINISH_HALLOWEEN_DAILY",
+              "count": 3,
+              "exp": 25,
+              "mission_id": 3005
+            },
+            {
+              "mission": "FINISH_DUNGEON",
+              "count": 25,
+              "exp": 25,
+              "mission_id": 7006
+            },
+            {
+              "mission": "KILL_MONSTER",
+              "count": 10000,
+              "exp": 25,
+              "mission_id": 7007
+            }
+          ]
+        },
+        "2026-11-06": {
+          "schedule_id": 8,
+          "missions": [
+            {
+              "mission": "CATCH_HAUNTED_PEARLS",
+              "vnum": 40726,
+              "count": 15,
+              "exp": 25,
+              "mission_id": 3004
+            },
+            {
+              "mission": "OPEN_MYSTICAL_CHEST",
+              "vnum": 33205,
+              "count": 5,
+              "exp": 25,
+              "mission_id": 3002
+            },
+            {
+              "mission": "CATCH_FISH",
+              "count": 600,
+              "exp": 25,
+              "mission_id": 8006
+            },
+            {
+              "mission": "MINING",
+              "count": 1000,
+              "exp": 25,
+              "mission_id": 8007
+            }
+          ]
+        }
+      },
+      "rewards": {
+        "0": {
+          "free": {
+            "vnum": 76053,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 94124,
+            "count": 1
+          }
+        },
+        "1": {
+          "free": {
+            "vnum": 61600,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 71084,
+            "count": 500
+          }
+        },
+        "2": {
+          "free": {
+            "vnum": 95156,
+            "count": 4
+          },
+          "premium": {
+            "vnum": 95087,
+            "count": 1
+          }
+        },
+        "3": {
+          "free": {
+            "vnum": 40023,
+            "count": 2
+          },
+          "premium": {
+            "vnum": 39063,
+            "count": 3
+          }
+        },
+        "4": {
+          "free": {
+            "vnum": 61606,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 55320,
+            "count": 1
+          }
+        },
+        "5": {
+          "free": {
+            "vnum": 71052,
+            "count": 500
+          },
+          "premium": {
+            "vnum": 61601,
+            "count": 3
+          }
+        },
+        "6": {
+          "free": {
+            "vnum": 65200,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 33205,
+            "count": 1
+          }
+        },
+        "7": {
+          "free": {
+            "vnum": 39063,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 95154,
+            "count": 1
+          }
+        },
+        "8": {
+          "free": {
+            "vnum": 95087,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65157,
+            "count": 50
+          }
+        },
+        "9": {
+          "free": {
+            "vnum": 71084,
+            "count": 250
+          },
+          "premium": {
+            "vnum": 65172,
+            "count": 3
+          }
+        },
+        "10": {
+          "free": {
+            "vnum": 55320,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 3
+          }
+        },
+        "11": {
+          "free": {
+            "vnum": 65132,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 65155,
+            "count": 100
+          }
+        },
+        "12": {
+          "free": {
+            "vnum": 55369,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 65132,
+            "count": 1
+          }
+        },
+        "13": {
+          "free": {
+            "vnum": 61705,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 33205,
+            "count": 1
+          }
+        },
+        "14": {
+          "free": {
+            "vnum": 96353,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 40601,
+            "count": 1
+          }
+        },
+        "15": {
+          "free": {
+            "vnum": 65132,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 61705,
+            "count": 5
+          }
+        },
+        "16": {
+          "free": {
+            "vnum": 95087,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 61702,
+            "count": 3
+          }
+        },
+        "17": {
+          "free": {
+            "vnum": 40804,
+            "count": 3
+          },
+          "premium": {
+            "vnum": 96353,
+            "count": 5
+          }
+        },
+        "18": {
+          "free": {
+            "vnum": 72346,
+            "count": 5
+          },
+          "premium": {
+            "vnum": 55310,
+            "count": 1
+          }
+        },
+        "19": {
+          "free": {
+            "vnum": 94119,
+            "count": 1
+          },
+          "premium": {
+            "vnum": 95147,
+            "count": 1
+          }
+        }
+      }
+    }
+  ]
+}

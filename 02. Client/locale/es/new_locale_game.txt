@@ -1,0 +1,98 @@
+BATTLEPASS_ALL_QUESTS_AVAILABLE	Todas las misiones disponibles
+BATTLEPASS_BONUS_CHEST	Cofre de Bonificación
+BATTLEPASS_BONUS_CHEST_HELP	Después del nivel %d, cada %d EXP adicional te dará automáticamente %d x %s. Puedes obtener esta recompensa varias veces.
+BATTLEPASS_BONUS_CHEST_PREVIEW	Pulsa para ver las posibles recompensas del cofre y sus cantidades.
+BATTLEPASS_BUY_EXP	Comprar EXP
+BATTLEPASS_BUY_PREMIUM_TOOLTIP	Comprar Premium
+BATTLEPASS_CLAIM_PREVIOUS_CONFIRM	Tienes recompensas anteriores disponibles. ¿Quieres recogerlas todas junto con la recompensa seleccionada?
+BATTLEPASS_COMPLETED	Finalizada
+BATTLEPASS_DEFAULT_QUEST	Misión del Pase de Batalla
+BATTLEPASS_DEFAULT_QUEST_DESC	Completa la misión
+BATTLEPASS_EXP_VALUE	%d EXP
+BATTLEPASS_FILTER_UNFINISHED	Mostrar solo misiones sin completar
+BATTLEPASS_FREE_TITLE	GRATIS
+BATTLEPASS_HEADER_TIME_LEFT	Expira en: %s
+BATTLEPASS_LEVEL	Nivel
+BATTLEPASS_MISSION_UNLOCK_DATE	Desbloqueo: %s
+BATTLEPASS_NEW_QUEST_TIME	Nueva misión en: %s
+BATTLEPASS_PREMIUM_TITLE	PRÉMIUM
+BATTLEPASS_QUEST_ADD_67_BONUS	Añadir bonificaciones 6/7
+BATTLEPASS_QUEST_ADD_ORE	Añadir mineral
+BATTLEPASS_QUEST_BUILD_SANDCASTLE	Construir castillos de arena con el Cubo
+BATTLEPASS_QUEST_BUY_ITEM_TO_PNJ	Comprar objetos a PNJ
+BATTLEPASS_QUEST_BUY_ITEM_WITH_GAYA	Comprar objeto con Gaya
+BATTLEPASS_QUEST_CATCH_FISH	Pescar
+BATTLEPASS_QUEST_CATCH_HAUNTED_PEARLS	Pescar Perlas Embrujadas
+BATTLEPASS_QUEST_CRAFT_ITEMS	Fabricar objetos
+BATTLEPASS_QUEST_DESC_67	Añade bonus 6 / 7
+BATTLEPASS_QUEST_DESC_BUY	Compra a PNJ
+BATTLEPASS_QUEST_DESC_CHAT	Escribe en chat general
+BATTLEPASS_QUEST_DESC_CHEST	Abre cofres
+BATTLEPASS_QUEST_DESC_CIRCUS	Cada mejora cuenta
+BATTLEPASS_QUEST_DESC_CRAFT	Fabrica objetos
+BATTLEPASS_QUEST_DESC_DEW	Recarga Rocío / Dios
+BATTLEPASS_QUEST_DESC_DUNGEON	Completa mazmorras
+BATTLEPASS_QUEST_DESC_EGG	Incuba huevos
+BATTLEPASS_QUEST_DESC_FISH	Pescar
+BATTLEPASS_QUEST_DESC_FLOWERS	Los 4 tipos de flores
+BATTLEPASS_QUEST_DESC_GAYA	Comprar con Gaya
+BATTLEPASS_QUEST_DESC_HALLOWEEN_DAILY	Mazmorra de Halloween de hoy
+BATTLEPASS_QUEST_DESC_LEVEL_15	Máx. 15 niveles menos
+BATTLEPASS_QUEST_DESC_LEVEL_20	Máx. 20 niveles menos
+BATTLEPASS_QUEST_DESC_LUCKYBOX	Renueva cajas suerte
+BATTLEPASS_QUEST_DESC_MINING	Extrae minerales
+BATTLEPASS_QUEST_DESC_MYSTICAL	Abre cofres místicos
+BATTLEPASS_QUEST_DESC_ORE	Inserta minerales
+BATTLEPASS_QUEST_DESC_PEARLS	Perlas embrujadas
+BATTLEPASS_QUEST_DESC_PET	Alimenta tu mascota
+BATTLEPASS_QUEST_DESC_PLAYERS	Derrota jugadores
+BATTLEPASS_QUEST_DESC_QUEST_BOOK	Completa libros misión
+BATTLEPASS_QUEST_DESC_SANDCASTLE	Entrega un cubo
+BATTLEPASS_QUEST_DESC_SELL	Vende a PNJ
+BATTLEPASS_QUEST_DESC_SHRINES	Destruye santuarios
+BATTLEPASS_QUEST_DESC_SILVER	Obtén monedas plata
+BATTLEPASS_QUEST_DESC_STONE_BAG	Obtén sacos de piedra
+BATTLEPASS_QUEST_DESC_STONE_HUNT	Caza diaria de piedras
+BATTLEPASS_QUEST_DESC_SWITCH	Cambia bonus
+BATTLEPASS_QUEST_DESC_TARGET_METIN	Rompe Metin objetivo
+BATTLEPASS_QUEST_DESC_UPGRADE	Mejora equipo
+BATTLEPASS_QUEST_DESTROY_METIN_STONES	Destruir piedras Metin
+BATTLEPASS_QUEST_DESTROY_SUMMER_SHRINES	Destruir Santuarios de Verano
+BATTLEPASS_QUEST_DESTROY_TARGET_METIN	Destruir un Metin específico
+BATTLEPASS_QUEST_FEED_PET	Alimentar mascota
+BATTLEPASS_QUEST_FINISH_DUNGEON	Completar mazmorra
+BATTLEPASS_QUEST_FINISH_HALLOWEEN_DAILY	Recoge premios de la rueda diaria de Halloween
+BATTLEPASS_QUEST_FINISH_QUEST_BOOK	Completar Libros de Misiones
+BATTLEPASS_QUEST_FINISH_SUMMER_STONE_HUNT	Completar Caza de Piedras de Verano
+BATTLEPASS_QUEST_GET_SILVER_COIN	Conseguir monedas de plata
+BATTLEPASS_QUEST_GET_STONE_BAG	Conseguir Bolsa de Piedras
+BATTLEPASS_QUEST_HARVEST_HALLOWEEN_FLOWERS	Recolectar Flores de Halloween
+BATTLEPASS_QUEST_KILL_BOSSES	Eliminar jefes
+BATTLEPASS_QUEST_KILL_MONSTERS	Eliminar monstruos
+BATTLEPASS_QUEST_KILL_PLAYERS	Eliminar jugadores
+BATTLEPASS_QUEST_MINING	Minar
+BATTLEPASS_QUEST_OPEN_CHESTS	Abrir cofres
+BATTLEPASS_QUEST_OPEN_EGGS	Abrir huevos
+BATTLEPASS_QUEST_OPEN_MYSTICAL_CHESTS	Abrir Cofres Místicos
+BATTLEPASS_QUEST_RECHARGE_DEW_DRAGON	Recargar Rocío / Dios Dragón
+BATTLEPASS_QUEST_REROLL_LUCKYBOX	Cambiar Cajas de la Suerte
+BATTLEPASS_QUEST_SELL_ITEMS_AT_PNJ	Vender objetos a PNJ
+BATTLEPASS_QUEST_SEND_GENERAL_CHAT_MESSAGES	Enviar mensajes al chat general
+BATTLEPASS_QUEST_UPGRADE_CIRCUS_SKILLS	Maestría de Habilidades del Circo
+BATTLEPASS_QUEST_UPGRADE_EQUIPMENT	Mejorar equipo
+BATTLEPASS_QUEST_USE_SWITCH	Usar cambiadores
+BATTLEPASS_RESULT_CLAIMED	Ya has recibido esta recompensa.
+BATTLEPASS_RESULT_EXP	Has ganado EXP del Pase de Batalla: %d
+BATTLEPASS_RESULT_INVENTORY	No tienes suficiente espacio en el inventario.
+BATTLEPASS_RESULT_LEVEL_UP	¡Tu nivel del Pase de Batalla ahora es %d!
+BATTLEPASS_RESULT_LOCKED	Esta recompensa se desbloquea en el nivel %d.
+BATTLEPASS_RESULT_MISSION_DONE	¡Has completado una misión del Pase de Batalla!
+BATTLEPASS_RESULT_NO_PREMIUM	Para las recompensas Premium necesitas el Pase de Batalla Premium.
+BATTLEPASS_RESULT_NO_SEASON	Actualmente no hay ningún Pase de Batalla activo.
+BATTLEPASS_RESULT_PREMIUM_HAD	El Pase de Batalla Premium ya está activo.
+BATTLEPASS_RESULT_PREMIUM_ON	Se ha activado el Pase de Batalla Premium.
+BATTLEPASS_RESULT_REWARD	Recompensas del Pase de Batalla recibidas (%d).
+BATTLEPASS_REWARD_TITLE	Recompensa
+BATTLEPASS_TITLE	Pase de Batalla
+MINIMAP_TOOLTIP_BATTLEPASS	Pase de Batalla
+MINIMAP_TOOLTIP_SHARE_POSITION	Compartir tu ubicación en el chat

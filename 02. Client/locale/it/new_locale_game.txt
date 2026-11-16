@@ -1,0 +1,98 @@
+BATTLEPASS_ALL_QUESTS_AVAILABLE	Tutte le missioni disponibili
+BATTLEPASS_BONUS_CHEST	Forziere Bonus
+BATTLEPASS_BONUS_CHEST_HELP	Dopo il livello %d, ogni %d di EXP aggiuntiva ti dà automaticamente %d x %s. Puoi ottenere questa ricompensa ripetutamente.
+BATTLEPASS_BONUS_CHEST_PREVIEW	Clicca per visualizzare le possibili ricompense e quantità dello scrigno.
+BATTLEPASS_BUY_EXP	Acquista EXP
+BATTLEPASS_BUY_PREMIUM_TOOLTIP	Acquista Premium
+BATTLEPASS_CLAIM_PREVIOUS_CONFIRM	Hai ricompense precedenti disponibili. Vuoi ritirarle tutte insieme alla ricompensa selezionata?
+BATTLEPASS_COMPLETED	Terminata
+BATTLEPASS_DEFAULT_QUEST	Missione Battle Pass
+BATTLEPASS_DEFAULT_QUEST_DESC	Completa la missione
+BATTLEPASS_EXP_VALUE	%d EXP
+BATTLEPASS_FILTER_UNFINISHED	Mostra solo le missioni non completate
+BATTLEPASS_FREE_TITLE	GRATUITO
+BATTLEPASS_HEADER_TIME_LEFT	Scade tra: %s
+BATTLEPASS_LEVEL	Livello
+BATTLEPASS_MISSION_UNLOCK_DATE	Sblocco: %s
+BATTLEPASS_NEW_QUEST_TIME	Nuova Missione tra: %s
+BATTLEPASS_PREMIUM_TITLE	PREMIUM
+BATTLEPASS_QUEST_ADD_67_BONUS	Aggiungi Bonus 6/7
+BATTLEPASS_QUEST_ADD_ORE	Aggiungi Minerale
+BATTLEPASS_QUEST_BUILD_SANDCASTLE	Costruisci Castelli di Sabbia con il Secchiello
+BATTLEPASS_QUEST_BUY_ITEM_TO_PNJ	Acquista oggetti dal PNG
+BATTLEPASS_QUEST_BUY_ITEM_WITH_GAYA	Acquista Oggetti con Gaya
+BATTLEPASS_QUEST_CATCH_FISH	Pesca Pesci
+BATTLEPASS_QUEST_CATCH_HAUNTED_PEARLS	Pesca Perle Infestate
+BATTLEPASS_QUEST_CRAFT_ITEMS	Crea Oggetti
+BATTLEPASS_QUEST_DESC_67	Aggiungi bonus 6 / 7
+BATTLEPASS_QUEST_DESC_BUY	Compra dai PNG
+BATTLEPASS_QUEST_DESC_CHAT	Scrivi in chat generale
+BATTLEPASS_QUEST_DESC_CHEST	Apri forzieri
+BATTLEPASS_QUEST_DESC_CIRCUS	Ogni aumento abilità
+BATTLEPASS_QUEST_DESC_CRAFT	Crea oggetti
+BATTLEPASS_QUEST_DESC_DEW	Ricarica Rugiada / Dio
+BATTLEPASS_QUEST_DESC_DUNGEON	Completa dungeon
+BATTLEPASS_QUEST_DESC_EGG	Schiudi uova
+BATTLEPASS_QUEST_DESC_FISH	Pesca
+BATTLEPASS_QUEST_DESC_FLOWERS	Tutti i 4 tipi di fiori
+BATTLEPASS_QUEST_DESC_GAYA	Acquista con Gaya
+BATTLEPASS_QUEST_DESC_HALLOWEEN_DAILY	Dungeon di Halloween di oggi
+BATTLEPASS_QUEST_DESC_LEVEL_15	Max. 15 livelli sotto
+BATTLEPASS_QUEST_DESC_LEVEL_20	Max. 20 livelli sotto
+BATTLEPASS_QUEST_DESC_LUCKYBOX	Ritenta casse fortuna
+BATTLEPASS_QUEST_DESC_MINING	Estrai minerali
+BATTLEPASS_QUEST_DESC_MYSTICAL	Apri forzieri mistici
+BATTLEPASS_QUEST_DESC_ORE	Inserisci minerali
+BATTLEPASS_QUEST_DESC_PEARLS	Pesca perle infestate
+BATTLEPASS_QUEST_DESC_PET	Nutri il pet
+BATTLEPASS_QUEST_DESC_PLAYERS	Sconfiggi giocatori
+BATTLEPASS_QUEST_DESC_QUEST_BOOK	Completa libri missione
+BATTLEPASS_QUEST_DESC_SANDCASTLE	Consegna un secchio
+BATTLEPASS_QUEST_DESC_SELL	Vendi ai PNG
+BATTLEPASS_QUEST_DESC_SHRINES	Distruggi santuari estivi
+BATTLEPASS_QUEST_DESC_SILVER	Guadagna argento
+BATTLEPASS_QUEST_DESC_STONE_BAG	Raccogli sacchi
+BATTLEPASS_QUEST_DESC_STONE_HUNT	Caccia giornaliera
+BATTLEPASS_QUEST_DESC_SWITCH	Cambia bonus
+BATTLEPASS_QUEST_DESC_TARGET_METIN	Distruggi Metin scelto
+BATTLEPASS_QUEST_DESC_UPGRADE	Migliora l'equip.
+BATTLEPASS_QUEST_DESTROY_METIN_STONES	Distruggi Pietre Metin
+BATTLEPASS_QUEST_DESTROY_SUMMER_SHRINES	Distruggi i Santuari Estivi
+BATTLEPASS_QUEST_DESTROY_TARGET_METIN	Distruggi una Pietra Metin Specifica
+BATTLEPASS_QUEST_FEED_PET	Dai da Mangiare al Famiglio
+BATTLEPASS_QUEST_FINISH_DUNGEON	Completa il dungeon
+BATTLEPASS_QUEST_FINISH_HALLOWEEN_DAILY	Ritira premi della ruota giornaliera di Halloween
+BATTLEPASS_QUEST_FINISH_QUEST_BOOK	Completa i Libri delle Missioni
+BATTLEPASS_QUEST_FINISH_SUMMER_STONE_HUNT	Completa la Caccia alla Pietra Estiva
+BATTLEPASS_QUEST_GET_SILVER_COIN	Ottieni Monete d'Argento
+BATTLEPASS_QUEST_GET_STONE_BAG	Ottieni una Borsa di Pietra
+BATTLEPASS_QUEST_HARVEST_HALLOWEEN_FLOWERS	Raccogli Fiori di Halloween
+BATTLEPASS_QUEST_KILL_BOSSES	Uccidi i boss
+BATTLEPASS_QUEST_KILL_MONSTERS	Uccidi Mostri
+BATTLEPASS_QUEST_KILL_PLAYERS	Uccidi Giocatori
+BATTLEPASS_QUEST_MINING	Estrazione mineraria
+BATTLEPASS_QUEST_OPEN_CHESTS	Apri Forzieri
+BATTLEPASS_QUEST_OPEN_EGGS	Apri Uova
+BATTLEPASS_QUEST_OPEN_MYSTICAL_CHESTS	Apri i Forzieri Mistici
+BATTLEPASS_QUEST_RECHARGE_DEW_DRAGON	Ricarica Rugiada / Dio Drago
+BATTLEPASS_QUEST_REROLL_LUCKYBOX	Ritira Scatole Fortunate
+BATTLEPASS_QUEST_SELL_ITEMS_AT_PNJ	Vendi oggetti al PNG
+BATTLEPASS_QUEST_SEND_GENERAL_CHAT_MESSAGES	Invia Messaggi nella Chat Generale
+BATTLEPASS_QUEST_UPGRADE_CIRCUS_SKILLS	Maestria Abilità del Circo
+BATTLEPASS_QUEST_UPGRADE_EQUIPMENT	Aggiornare l'attrezzatura
+BATTLEPASS_QUEST_USE_SWITCH	Usa uno Switcher
+BATTLEPASS_RESULT_CLAIMED	Hai già ottenuto questa ricompensa.
+BATTLEPASS_RESULT_EXP	Hai ottenuto EXP Battle Pass: %d
+BATTLEPASS_RESULT_INVENTORY	Non hai abbastanza spazio nell'inventario.
+BATTLEPASS_RESULT_LEVEL_UP	Il tuo livello Battle Pass è %d!
+BATTLEPASS_RESULT_LOCKED	Questa ricompensa si sblocca al livello %d.
+BATTLEPASS_RESULT_MISSION_DONE	Hai completato una missione del Battle Pass!
+BATTLEPASS_RESULT_NO_PREMIUM	Per le ricompense Premium serve il Battle Pass Premium.
+BATTLEPASS_RESULT_NO_SEASON	Al momento non c'è nessun Battle Pass attivo.
+BATTLEPASS_RESULT_PREMIUM_HAD	Il Battle Pass Premium è già attivo.
+BATTLEPASS_RESULT_PREMIUM_ON	Battle Pass Premium attivato.
+BATTLEPASS_RESULT_REWARD	Ricompense Battle Pass ottenute (%d).
+BATTLEPASS_REWARD_TITLE	Ricompensa
+BATTLEPASS_TITLE	Passaggio battaglia
+MINIMAP_TOOLTIP_BATTLEPASS	Passaggio battaglia
+MINIMAP_TOOLTIP_SHARE_POSITION	Condividi la tua posizione nella chat
