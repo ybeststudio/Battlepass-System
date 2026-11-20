@@ -1,13 +1,14 @@
 /*
  * File Name : battlepass_renewal.cpp
  * Author    : BestStudio
- * Version   : 1.0
- * Date      : 2026-11-14
+ * Version   : 1.1
+ * Date      : 2026-11-20
  *
  * Battlepass, see battlepass_renewal.h. Rules from the Anka uiBattlePass window data and battlepass_config.json:
  * reward i (free / premium) is unlocked at level i + 1, every weekly schedule whose date has come stays open until the
  * season ends, a finished mission gives its exp once, level exp 20 (event: from the config), after the last level
- * every further level gives the max level bonus item. State: quest flags "bp<season>.*" (event "bpe<season>.*").
+ * every further level gives the max level bonus item. State: tables battlepass_progress / battlepass_mission, read
+ * asynchronously at login, progress written at once, mission counters batched (every 60 s and at logout).
  *
  * Protocol (server -> client, one comma-joined token each):
  *   BPInfo kind,season,level,exp,levelExp,premium,claimedFree,claimedPremium,endTime,serverTime,maxLevel  (season 0 = none)
@@ -27,9 +28,13 @@
 #include "desc.h"
 #include "locale_service.h"
 #include "global_ranking.h"
+#include "db.h"
+#include "char_manager.h"
 #include <fstream>
 #include <sstream>
 #include <map>
+#include <set>
+#include <memory>
 #include <vector>
 #include <string>
 #include <ctime>
@@ -42,6 +47,7 @@ namespace
 		BP_KIND_EVENT = 1,
 		BP_KIND_COUNT = 2,
 		BP_MISSION_CHUNK = 12,
+		BP_FLUSH_SECONDS = 60,
 		BP_LEVEL_GAP_NORMAL = 15,		// QUEST_DESCRIPTION: "En fazla 15 seviye alt"
 		BP_LEVEL_GAP_BOSS = 20,			// "En fazla 20 seviye alt"
 	};
@@ -218,18 +224,235 @@ namespace
 		return NULL;
 	}
 
-	std::string Flag(const SSeason* s, const char* c_szField)
+	struct SState
 	{
-		char sz[64];
-		snprintf(sz, sizeof(sz), "%s%d.%s", s->iKind == BP_KIND_EVENT ? "bpe" : "bp", s->iId, c_szField);
-		return sz;
+		int iSeason;
+		int iLevel, iExp, iPremium;
+		std::string strFree, strPremium;
+		std::map<int, int> mapMission;
+		std::set<int> setDirty;
+
+		SState() : iSeason(0), iLevel(0), iExp(0), iPremium(0) {}
+	};
+
+	struct SPending
+	{
+		int iType;
+		DWORD dwVnum;
+		int iCount;
+	};
+
+	struct SPlayer
+	{
+		DWORD dwGen;
+		int iWaiting;
+		bool bLoaded;
+		bool bWantInfo;
+		time_t tLastFlush;
+		SState aState[BP_KIND_COUNT];
+		std::vector<SPending> vecPending;
+
+		SPlayer() : dwGen(0), iWaiting(0), bLoaded(false), bWantInfo(false), tLastFlush(0) {}
+	};
+
+	std::map<DWORD, SPlayer> s_mapPlayer;
+	DWORD s_dwGen = 0;
+
+	bool IsClaimed(const std::string& s, int i)
+	{
+		return i >= 0 && i < (int) s.size() && s[i] == '1';
 	}
 
-	std::string MissionFlag(const SSeason* s, int iId)
+	void SetClaimed(std::string& s, int i)
 	{
-		char sz[16];
-		snprintf(sz, sizeof(sz), "m%d", iId);
-		return Flag(s, sz);
+		if ((int) s.size() <= i)
+			s.resize(i + 1, '0');
+		s[i] = '1';
+	}
+
+	void SaveProgress(DWORD dwPID, int iKind, const SState& st)
+	{
+		if (!st.iSeason)
+			return;
+		DBManager::instance().Query(
+			"INSERT INTO battlepass_progress%s (pid, kind, season, level, exp, premium, claimed_free, claimed_premium) "
+			"VALUES (%u, %d, %d, %d, %d, %d, '%s', '%s') ON DUPLICATE KEY UPDATE level = VALUES(level), exp = VALUES(exp), "
+			"premium = VALUES(premium), claimed_free = VALUES(claimed_free), claimed_premium = VALUES(claimed_premium)",
+			get_table_postfix(), dwPID, iKind, st.iSeason, st.iLevel, st.iExp, st.iPremium, st.strFree.c_str(), st.strPremium.c_str());
+	}
+
+	void FlushMissions(DWORD dwPID, SPlayer& pl, bool bDirect)
+	{
+		for (int k = 0; k < BP_KIND_COUNT; ++k)
+		{
+			SState& st = pl.aState[k];
+			if (!st.iSeason || st.setDirty.empty())
+				continue;
+			std::string rows;
+			int iRows = 0;
+			for (std::set<int>::const_iterator it = st.setDirty.begin(); ; )
+			{
+				const bool bEnd = it == st.setDirty.end();
+				if (!bEnd)
+				{
+					char sz[64];
+					snprintf(sz, sizeof(sz), "%s(%u,%d,%d,%d,%d)", rows.empty() ? "" : ",", dwPID, k, st.iSeason, *it, st.mapMission[*it]);
+					rows += sz;
+					++iRows;
+					++it;
+				}
+				if ((bEnd || iRows >= 60) && iRows)
+				{
+					if (bDirect)
+					{
+						std::unique_ptr<SQLMsg> pMsg(DBManager::instance().DirectQuery(
+							"INSERT INTO battlepass_mission%s (pid, kind, season, mission, value) VALUES %s ON DUPLICATE KEY UPDATE value = VALUES(value)",
+							get_table_postfix(), rows.c_str()));
+					}
+					else
+					{
+						DBManager::instance().Query(
+							"INSERT INTO battlepass_mission%s (pid, kind, season, mission, value) VALUES %s ON DUPLICATE KEY UPDATE value = VALUES(value)",
+							get_table_postfix(), rows.c_str());
+					}
+					rows.clear();
+					iRows = 0;
+				}
+				if (bEnd)
+					break;
+			}
+			st.setDirty.clear();
+		}
+		pl.tLastFlush = time(0);
+	}
+
+	void SendSeason(LPCHARACTER ch, int iKind);
+	void ApplyEvent(LPCHARACTER ch, SPlayer& pl, int iType, DWORD dwVnum, int iCount);
+
+	void OnLoaded(DWORD dwPID, DWORD dwGen)
+	{
+		std::map<DWORD, SPlayer>::iterator it = s_mapPlayer.find(dwPID);
+		if (it == s_mapPlayer.end() || it->second.dwGen != dwGen || --it->second.iWaiting > 0)
+			return;
+		SPlayer& pl = it->second;
+		pl.bLoaded = true;
+		LPCHARACTER ch = CHARACTER_MANAGER::instance().FindByPID(dwPID);
+		if (!ch || !ch->GetDesc())
+			return;
+		std::vector<SPending> vecPending;
+		vecPending.swap(pl.vecPending);
+		for (size_t i = 0; i < vecPending.size(); ++i)
+			ApplyEvent(ch, pl, vecPending[i].iType, vecPending[i].dwVnum, vecPending[i].iCount);
+		if (pl.bWantInfo)
+		{
+			pl.bWantInfo = false;
+			for (int k = 0; k < BP_KIND_COUNT; ++k)
+				SendSeason(ch, k);
+		}
+	}
+
+	void LoadPlayer(DWORD dwPID)
+	{
+		SPlayer& pl = s_mapPlayer[dwPID];
+		pl.dwGen = ++s_dwGen;
+		pl.bLoaded = false;
+		pl.iWaiting = 0;
+		pl.vecPending.clear();
+		pl.tLastFlush = time(0);
+
+		std::string where;
+		for (int k = 0; k < BP_KIND_COUNT; ++k)
+		{
+			pl.aState[k] = SState();
+			const SSeason* s = Active(k);
+			if (!s)
+				continue;
+			pl.aState[k].iSeason = s->iId;
+			char sz[64];
+			snprintf(sz, sizeof(sz), "%s(kind = %d AND season = %d)", where.empty() ? "" : " OR ", k, s->iId);
+			where += sz;
+		}
+		if (where.empty())
+		{
+			pl.bLoaded = true;
+			return;
+		}
+
+		const DWORD dwGen = pl.dwGen;
+		pl.iWaiting = 2;
+		DBManager::instance().FuncQuery([dwPID, dwGen](SQLMsg* pMsg)
+		{
+			std::map<DWORD, SPlayer>::iterator it = s_mapPlayer.find(dwPID);
+			if (it != s_mapPlayer.end() && it->second.dwGen == dwGen && pMsg && pMsg->Get() && pMsg->Get()->pSQLResult)
+			{
+				MYSQL_ROW row;
+				while ((row = mysql_fetch_row(pMsg->Get()->pSQLResult)))
+				{
+					int k = 0, iSeason = 0;
+					str_to_number(k, row[0]);
+					str_to_number(iSeason, row[1]);
+					if (k < 0 || k >= BP_KIND_COUNT || it->second.aState[k].iSeason != iSeason)
+						continue;
+					SState& st = it->second.aState[k];
+					str_to_number(st.iLevel, row[2]);
+					str_to_number(st.iExp, row[3]);
+					str_to_number(st.iPremium, row[4]);
+					st.strFree = row[5] ? row[5] : "";
+					st.strPremium = row[6] ? row[6] : "";
+				}
+			}
+			OnLoaded(dwPID, dwGen);
+		}, "SELECT kind, season, level, exp, premium, claimed_free, claimed_premium FROM battlepass_progress%s WHERE pid = %u AND (%s)",
+			get_table_postfix(), dwPID, where.c_str());
+
+		DBManager::instance().FuncQuery([dwPID, dwGen](SQLMsg* pMsg)
+		{
+			std::map<DWORD, SPlayer>::iterator it = s_mapPlayer.find(dwPID);
+			if (it != s_mapPlayer.end() && it->second.dwGen == dwGen && pMsg && pMsg->Get() && pMsg->Get()->pSQLResult)
+			{
+				MYSQL_ROW row;
+				while ((row = mysql_fetch_row(pMsg->Get()->pSQLResult)))
+				{
+					int k = 0, iSeason = 0, iMission = 0, iValue = 0;
+					str_to_number(k, row[0]);
+					str_to_number(iSeason, row[1]);
+					str_to_number(iMission, row[2]);
+					str_to_number(iValue, row[3]);
+					if (k < 0 || k >= BP_KIND_COUNT || it->second.aState[k].iSeason != iSeason)
+						continue;
+					it->second.aState[k].mapMission[iMission] = iValue;
+				}
+			}
+			OnLoaded(dwPID, dwGen);
+		}, "SELECT kind, season, mission, value FROM battlepass_mission%s WHERE pid = %u AND (%s)",
+			get_table_postfix(), dwPID, where.c_str());
+	}
+
+	SPlayer* GetPlayer(LPCHARACTER ch)
+	{
+		if (!ch || !ch->IsPC())
+			return NULL;
+		std::map<DWORD, SPlayer>::iterator it = s_mapPlayer.find(ch->GetPlayerID());
+		if (it == s_mapPlayer.end())
+		{
+			LoadPlayer(ch->GetPlayerID());
+			it = s_mapPlayer.find(ch->GetPlayerID());
+		}
+		SPlayer& pl = it->second;
+		if (pl.bLoaded)
+		{
+			for (int k = 0; k < BP_KIND_COUNT; ++k)
+			{
+				const SSeason* s = Active(k);
+				if ((s ? s->iId : 0) != pl.aState[k].iSeason)
+				{
+					FlushMissions(ch->GetPlayerID(), pl, false);
+					LoadPlayer(ch->GetPlayerID());
+					break;
+				}
+			}
+		}
+		return &pl;
 	}
 
 	void Result(LPCHARACTER ch, int iCode, int iValue = 0)
@@ -240,14 +463,28 @@ namespace
 	void SendSeason(LPCHARACTER ch, int iKind)
 	{
 		const SSeason* s = Active(iKind);
-		if (!s)
+		SPlayer* pl = GetPlayer(ch);
+		if (!s || !pl)
 		{
 			ch->ChatPacket(CHAT_TYPE_COMMAND, "BPInfo %d,0", iKind);
 			return;
 		}
+		if (!pl->bLoaded)
+		{
+			pl->bWantInfo = true;
+			return;
+		}
+		const SState& st = pl->aState[iKind];
+		int iMaskFree = 0, iMaskPremium = 0;
+		for (int i = 0; i < 31; ++i)
+		{
+			if (IsClaimed(st.strFree, i))
+				iMaskFree |= (1 << i);
+			if (IsClaimed(st.strPremium, i))
+				iMaskPremium |= (1 << i);
+		}
 		ch->ChatPacket(CHAT_TYPE_COMMAND, "BPInfo %d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", iKind, s->iId,
-			ch->GetQuestFlag(Flag(s, "lv")), ch->GetQuestFlag(Flag(s, "exp")), s->iLevelExp, ch->GetQuestFlag(Flag(s, "prem")),
-			ch->GetQuestFlag(Flag(s, "cf")), ch->GetQuestFlag(Flag(s, "cp")), (int) s->tEnd, (int) time(0), (int) s->vecReward.size());
+			st.iLevel, st.iExp, s->iLevelExp, st.iPremium, iMaskFree, iMaskPremium, (int) s->tEnd, (int) time(0), (int) s->vecReward.size());
 
 		const time_t now = time(0);
 		std::string buf;
@@ -257,8 +494,9 @@ namespace
 			const SMission& m = s->vecMission[i];
 			if (m.tStart > now)
 				continue;
+			std::map<int, int>::const_iterator itv = st.mapMission.find(m.iId);
 			char sz[32];
-			snprintf(sz, sizeof(sz), "%s%d:%d", buf.empty() ? "" : ";", m.iId, ch->GetQuestFlag(MissionFlag(s, m.iId)));
+			snprintf(sz, sizeof(sz), "%s%d:%d", buf.empty() ? "" : ";", m.iId, itv == st.mapMission.end() ? 0 : itv->second);
 			buf += sz;
 			if (++iInChunk >= BP_MISSION_CHUNK)
 			{
@@ -271,12 +509,13 @@ namespace
 			ch->ChatPacket(CHAT_TYPE_COMMAND, "BPMissions %d,%d,%s", iKind, iChunk, buf.empty() ? "-" : buf.c_str());
 	}
 
-	void GiveExp(LPCHARACTER ch, const SSeason* s, int iExp)
+	void GiveExp(LPCHARACTER ch, SPlayer& pl, const SSeason* s, int iExp)
 	{
 		if (iExp <= 0)
 			return;
-		int iLevel = ch->GetQuestFlag(Flag(s, "lv"));
-		int iCur = ch->GetQuestFlag(Flag(s, "exp")) + iExp;
+		SState& st = pl.aState[s->iKind];
+		int iLevel = st.iLevel;
+		int iCur = st.iExp + iExp;
 		const int iMax = (int) s->vecReward.size();
 		while (iCur >= s->iLevelExp)
 		{
@@ -289,13 +528,47 @@ namespace
 			else if (s->dwBonusVnum && s->iBonusCount > 0)
 				ch->AutoGiveItem(s->dwBonusVnum, s->iBonusCount);	// max_level_bonus_reward
 		}
-		ch->SetQuestFlag(Flag(s, "lv"), iLevel);
-		ch->SetQuestFlag(Flag(s, "exp"), iCur);
+		st.iLevel = iLevel;
+		st.iExp = iCur;
+		SaveProgress(ch->GetPlayerID(), s->iKind, st);
 	}
 
 	bool MatchTarget(const SMission& m, DWORD dwVnum)
 	{
 		return !m.dwVnum || m.dwVnum == dwVnum;
+	}
+
+	void ApplyEvent(LPCHARACTER ch, SPlayer& pl, int iType, DWORD dwVnum, int iCount)
+	{
+		const time_t now = time(0);
+		for (int k = 0; k < BP_KIND_COUNT; ++k)
+		{
+			const SSeason* s = Active(k);
+			if (!s || pl.aState[k].iSeason != s->iId)
+				continue;
+			SState& st = pl.aState[k];
+			for (size_t i = 0; i < s->vecMission.size(); ++i)
+			{
+				const SMission& m = s->vecMission[i];
+				if (m.iType != iType || m.tStart > now || !MatchTarget(m, dwVnum))
+					continue;
+				int& iValue = st.mapMission[m.iId];
+				if (iValue >= m.iCount)
+					continue;
+				iValue = MIN(m.iCount, iValue + iCount);
+				st.setDirty.insert(m.iId);
+				ch->ChatPacket(CHAT_TYPE_COMMAND, "BPMission %d,%d,%d", k, m.iId, iValue);
+				if (iValue >= m.iCount)
+				{
+					Result(ch, BR_MISSION_DONE, m.iId);
+					FlushMissions(ch->GetPlayerID(), pl, false);
+					GiveExp(ch, pl, s, m.iExp);
+					SendSeason(ch, k);
+				}
+			}
+		}
+		if (time(0) - pl.tLastFlush >= BP_FLUSH_SECONDS)
+			FlushMissions(ch->GetPlayerID(), pl, false);
 	}
 }
 
@@ -309,39 +582,40 @@ void BattlepassRenewal_SendInfo(LPCHARACTER ch)
 
 void BattlepassRenewal_OnLogin(LPCHARACTER ch)
 {
-	BattlepassRenewal_SendInfo(ch);
+	if (!ch || !ch->IsPC())
+		return;
+	LoadPlayer(ch->GetPlayerID());
+}
+
+void BattlepassRenewal_OnLogout(LPCHARACTER ch)
+{
+	if (!ch || !ch->IsPC())
+		return;
+	std::map<DWORD, SPlayer>::iterator it = s_mapPlayer.find(ch->GetPlayerID());
+	if (it == s_mapPlayer.end())
+		return;
+	if (it->second.bLoaded)
+		FlushMissions(ch->GetPlayerID(), it->second, true);
+	s_mapPlayer.erase(it);
 }
 
 void BattlepassRenewal_OnEvent(LPCHARACTER ch, int iType, DWORD dwVnum, int iCount)
 {
 	if (!ch || !ch->IsPC() || !ch->GetDesc() || iCount <= 0)
 		return;
-	const time_t now = time(0);
-	for (int k = 0; k < BP_KIND_COUNT; ++k)
+	SPlayer* pl = GetPlayer(ch);
+	if (!pl)
+		return;
+	if (!pl->bLoaded)
 	{
-		const SSeason* s = Active(k);
-		if (!s)
-			continue;
-		for (size_t i = 0; i < s->vecMission.size(); ++i)
+		if (pl->vecPending.size() < 512)
 		{
-			const SMission& m = s->vecMission[i];
-			if (m.iType != iType || m.tStart > now || !MatchTarget(m, dwVnum))
-				continue;
-			const std::string flag = MissionFlag(s, m.iId);
-			const int iOld = ch->GetQuestFlag(flag);
-			if (iOld >= m.iCount)
-				continue;
-			const int iNew = MIN(m.iCount, iOld + iCount);
-			ch->SetQuestFlag(flag, iNew);
-			ch->ChatPacket(CHAT_TYPE_COMMAND, "BPMission %d,%d,%d", k, m.iId, iNew);
-			if (iNew >= m.iCount)
-			{
-				Result(ch, BR_MISSION_DONE, m.iId);
-				GiveExp(ch, s, m.iExp);
-				SendSeason(ch, k);
-			}
+			SPending p = { iType, dwVnum, iCount };
+			pl->vecPending.push_back(p);
 		}
+		return;
 	}
+	ApplyEvent(ch, *pl, iType, dwVnum, iCount);
 }
 
 void BattlepassRenewal_OnKill(LPCHARACTER victim, LPCHARACTER killer)
@@ -400,25 +674,30 @@ bool BattlepassRenewal_UseItem(LPCHARACTER ch, LPITEM item)
 		if (!bPremium && !bExp)
 			continue;
 		const SSeason* s = Active(k);
-		if (!s)
+		SPlayer* pl = GetPlayer(ch);
+		if (!s || !pl)
 		{
 			Result(ch, BR_NO_SEASON, k);
 			return true;
 		}
+		if (!pl->bLoaded)
+			return true;
+		SState& st = pl->aState[k];
 		if (bPremium)
 		{
-			if (ch->GetQuestFlag(Flag(s, "prem")))
+			if (st.iPremium)
 			{
 				Result(ch, BR_PREMIUM_HAD, k);
 				return true;
 			}
-			ch->SetQuestFlag(Flag(s, "prem"), 1);
+			st.iPremium = 1;
+			SaveProgress(ch->GetPlayerID(), k, st);
 			Result(ch, BR_PREMIUM_ON, k);
 		}
 		else
 		{
 			const int iExp = MAX(1, item->GetValue(0)) * s->iLevelExp;
-			GiveExp(ch, s, iExp);
+			GiveExp(ch, *pl, s, iExp);
 			Result(ch, BR_EXP, iExp);
 		}
 		item->SetCount(item->GetCount() - 1);
@@ -454,14 +733,19 @@ ACMD(do_battlepass_renewal)
 
 	int iKind = 0;
 	str_to_number(iKind, arg2);
-	const SSeason* s = Active(MINMAX(0, iKind, BP_KIND_COUNT - 1));
-	if (!s)
+	iKind = MINMAX(0, iKind, BP_KIND_COUNT - 1);
+	const SSeason* s = Active(iKind);
+	SPlayer* pl = GetPlayer(ch);
+	if (!s || !pl)
 	{
 		Result(ch, BR_NO_SEASON, iKind);
 		return;
 	}
-	const int iLevel = ch->GetQuestFlag(Flag(s, "lv"));
-	const bool bPremium = ch->GetQuestFlag(Flag(s, "prem")) != 0;
+	if (!pl->bLoaded)
+		return;
+	SState& st = pl->aState[iKind];
+	const int iLevel = st.iLevel;
+	const bool bPremium = st.iPremium != 0;
 	int iFirst = 0, iLast = (int) s->vecReward.size() - 1, iTrackFirst = 0, iTrackLast = 1;
 	if (sub == "claim")
 	{
@@ -489,11 +773,10 @@ ACMD(do_battlepass_renewal)
 	{
 		if (iTrack && !bPremium)
 			continue;
-		const char* c_szMask = iTrack ? "cp" : "cf";
-		int iMask = ch->GetQuestFlag(Flag(s, c_szMask));
+		std::string& strMask = iTrack ? st.strPremium : st.strFree;
 		for (int i = iFirst; i <= iLast && i < iLevel && i < 31; ++i)
 		{
-			if (iMask & (1 << i))
+			if (IsClaimed(strMask, i))
 				continue;
 			const SReward& r = s->vecReward[i];
 			const DWORD dwVnum = iTrack ? r.dwPremium : r.dwFree;
@@ -503,11 +786,12 @@ ACMD(do_battlepass_renewal)
 				Result(ch, BR_INVENTORY);
 				break;
 			}
-			iMask |= (1 << i);
+			SetClaimed(strMask, i);
 			++iGiven;
 		}
-		ch->SetQuestFlag(Flag(s, c_szMask), iMask);
 	}
+	if (iGiven)
+		SaveProgress(ch->GetPlayerID(), iKind, st);
 	if (sub == "claim" && !iGiven)
 		Result(ch, BR_CLAIMED, iFirst + 1);
 	else if (iGiven)

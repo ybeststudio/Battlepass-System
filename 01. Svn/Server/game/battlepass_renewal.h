@@ -52,6 +52,7 @@ enum EBattlepassMission
 };
 
 void BattlepassRenewal_OnLogin(CHARACTER* ch);
+void BattlepassRenewal_OnLogout(CHARACTER* ch);	// mission counters written, cache dropped
 void BattlepassRenewal_SendInfo(CHARACTER* ch);
 void BattlepassRenewal_OnEvent(CHARACTER* ch, int iType, DWORD dwVnum = 0, int iCount = 1);
 void BattlepassRenewal_OnKill(CHARACTER* victim, CHARACTER* killer);

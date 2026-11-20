@@ -8,6 +8,7 @@ Sezonluk savaş bileti. Ücretsiz ve premium ödül hattı, günlük / haftalık
 
 ## Ne var?
 
+- İlerleme ayrı tablolarda: `battlepass_progress` ve `battlepass_mission` (`03. Server/mysql/battlepass_tables.sql`). Girişte sadece aktif sezon async okunur; ödül / premium / seviye anında, görev sayaçları 60 sn'de bir ve çıkışta toplu yazılır
 - Battlepass penceresi (`uibattlepass.py`)
 - Görev ilerlemesi sunucudan anlık gelir (`battlepass_renewal.cpp`)
 - Ödül ve görev ayarları `locale/common/config_json/battlepass_config.json`
@@ -49,6 +50,8 @@ Client ve game tarafında aynı isimli flagler birlikte açık olmalı; tek tara
 
 ## Notlar
 
+- `battlepass_tables.sql` eski sürümden geçenler için quest tablosundaki `bp*` satırlarını yeni tablolara taşır ve eski satırları siler. Biten sezon tek sorguyla silinir (SQL dosyasının sonundaki örnek).
+- `char.cpp` patch'i çıkışta görev sayaçlarını yazar; atlanırsa son 60 saniyelik ilerleme kaybolabilir.
 - `03. Server/share/locale/europe/` altındaki dosyaları kendi sunucu locale klasörüne kopyala (ör. `share/locale/turkey/`).
 - `battlepass.txt` elle düzenlenmez: `03. Server/tools/convert_battlepass.py` istemcideki `battlepass_config.json` dosyasından üretir; iki taraf aynı json'u kullanır.
 - Veri dosyaları: `locale/common/config_json/battlepass_config.json`
